@@ -1,0 +1,22 @@
+Generating code for a functional
+One way to generate the code for a new functional to add is shown in workflow schematic NWXC code generation workflow
+
+The step involved can be summarized as:
+
+Create an automatic differentiation implementation
+Take a Fortran implementation of a functional and strip the code for all the derivatives out, leaving just the energy expression itself.
+Change the data type of the input arrays (rho, rgamma, and tau) as well as of the output array (func or fnc).
+Include “nwad.fh” before the “implicit” statement.
+Change the data type of the appropriate intermediate variables (compiler errors result where assignments of derived data type variables to double precision variables remain)
+Generate the Maxima expression
+Add the functional printing version of the automatically differentiated code to nwxc_eval_df_doit_print
+nwxc_eval_print.F
+.
+Recompile nwxc_fnc_print (run “make nwxc_fnc_print” in the nwxc directory).
+Add an input file to maxima/input to print the expression.
+In the “maxima” directory run “make max/\<functional>.max” to generate the Maxima expression.
+Generate the symbolic algebra implementation
+In the “maxima” directory edit the GNUmakefile uncommenting the AUTOXC and AUTOXC_DS variables.
+Add the appropriate Fortran file to the OBJ variable.
+Run “make f77/\<functional>.F” to generate the Fortran source code (this may take a while).
+

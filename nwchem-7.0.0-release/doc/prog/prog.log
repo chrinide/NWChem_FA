@@ -1,0 +1,679 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.12.5)  25 SEP 2020 12:56
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**prog.tex
+(./prog.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/latex209.def
+File: latex209.def 2015/02/22 v0.53 Standard LaTeX file
+
+
+          Entering LaTeX 2.09 COMPATIBILITY MODE
+ *************************************************************
+    !!WARNING!!    !!WARNING!!    !!WARNING!!    !!WARNING!!   
+ 
+ This mode attempts to provide an emulation of the LaTeX 2.09
+ author environment so that OLD documents can be successfully
+ processed. It should NOT be used for NEW documents!
+ 
+ New documents should use Standard LaTeX conventions and start
+ with the \documentclass command.
+ 
+ Compatibility mode is UNLIKELY TO WORK with LaTeX 2.09 style
+ files that change any internal macros, especially not with
+ those that change the FONT SELECTION or OUTPUT ROUTINES.
+ 
+ Therefore such style files MUST BE UPDATED to use
+          Current Standard LaTeX: LaTeX2e.
+ If you suspect that you may be using such a style file, which
+ is probably very, very old by now, then you should attempt to
+ get it updated by sending a copy of this error message to the
+ author of that file.
+ *************************************************************
+
+\footheight=\dimen102
+\@maxsep=\dimen103
+\@dblmaxsep=\dimen104
+\@cla=\count79
+\@clb=\count80
+\mscount=\count81
+(/usr/share/texlive/texmf-dist/tex/latex/base/tracefnt.sty
+Package: tracefnt 2015/02/21 v3.0k Standard LaTeX package (font tracing)
+\tracingfonts=\count82
+LaTeX Info: Redefining \selectfont on input line 106.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 268.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 269.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 270.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 276.
+LaTeX Info: Redefining \em on input line 286.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 332.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 334.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 336.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2a Standard LaTeX option (flush left equations)
+\mathindent=\dimen105
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count83
+\c@chapter=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\c@figure=\count90
+\c@table=\count91
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+Compatibility mode: definition of \rm ignored.
+Compatibility mode: definition of \sf ignored.
+Compatibility mode: definition of \tt ignored.
+Compatibility mode: definition of \bf ignored.
+Compatibility mode: definition of \it ignored.
+Compatibility mode: definition of \sl ignored.
+Compatibility mode: definition of \sc ignored.
+LaTeX Info: Redefining \cal on input line 582.
+LaTeX Info: Redefining \mit on input line 583.
+\bibindent=\dimen106
+) (./fullpage.sty)
+(./prog.aux)
+\openout1 = `prog.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 15.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 15.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [0
+
+
+]
+(./disclaimer.tex [1
+
+]) [2
+
+] (./glossary.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
+ [3
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 50.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 50.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 50.
+ [4]
+Overfull \hbox (10.5235pt too wide) in paragraph at lines 116--120
+\OT1/cmr/m/n/12 Hartree-Fock (RHF) wave-func-tions, re-stricted high-spin open-
+shell Hartree-Fock (ROHF)
+ []
+
+) [5] [6
+
+] (./about.tex [7] [8]
+Underfull \vbox (badness 6675) has occurred while \output is active []
+
+ [9]
+[10]
+Overfull \hbox (14.65804pt too wide) in paragraph at lines 194--199
+\OT1/cmr/m/n/12 This chap-ter de-scribes pro-ce-dures for doc-u-ment-ing mod-i-
+fi-ca-tions and new mod-ules in NWChem.
+ []
+
+[11]
+Overfull \hbox (0.4374pt too wide) in paragraph at lines 229--231
+[]\OT1/cmr/m/n/12 Homepage for William R. Wi-ley En-vi-ron-men-tal Molec-u-lar 
+Sci-ences Lab-o-ra-tory (EMSL)
+ []
+
+
+Overfull \hbox (8.8168pt too wide) in paragraph at lines 260--260
+ []          \OT1/cmtt/m/n/12 http://www.emsl.pnl.gov:2080/docs/parsoft/ma/MAap
+i.html[] 
+ []
+
+
+Overfull \hbox (39.69182pt too wide) in paragraph at lines 265--265
+ []          \OT1/cmtt/m/n/12 http://www.emsl.pnl.gov:2080/docs/parsoft/chemio/
+chemio.html[] 
+ []
+
+) [12] (./prog.toc [13
+
+
+]
+Underfull \vbox (badness 1721) has occurred while \output is active []
+
+ [14]
+[15]
+Underfull \vbox (badness 1721) has occurred while \output is active []
+
+ [16]
+[17]
+Underfull \vbox (badness 1721) has occurred while \output is active []
+
+ [18]
+[19] [20]
+Underfull \vbox (badness 1721) has occurred while \output is active []
+
+ [21])
+\tf@toc=\write3
+\openout3 = `prog.toc'.
+
+
+[22]
+Chapter 1.
+(./prog_man_intro.tex [23
+
+
+] [24]) (./nwarch.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 9.
+ [25] [26] [27] [28] [29]
+
+LaTeX Warning: Reference `sec:intapi' on page 30 undefined on input line 238.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30])
+[31] [32
+
+]
+Chapter 2.
+(./generic.tex [33]
+Overfull \hbox (2.9618pt too wide) in paragraph at lines 66--75
+[]\OT1/cmr/m/n/12 As long as in-put is avail-able from the in-put file, the in-
+put mod-ule (rou-tine []\OT1/cmtt/m/n/12 input_parse()\OT1/cmr/m/n/12 )
+ []
+
+[34]
+Overfull \hbox (17.92189pt too wide) in paragraph at lines 132--136
+[]\OT1/cmr/m/n/12 NWChem con-tains a layer of rou-tines that can per-form the m
+ost com-mon tasks/computations
+ []
+
+[35] [36]
+Overfull \hbox (11.89525pt too wide) in paragraph at lines 222--222
+[]\OT1/cmtt/m/n/12 c     .  task:gradient (real array) - derivative w.r.t. geom
+etry cart. coords.[] 
+ []
+
+[37] [38] [39]) [40]
+Chapter 3.
+(./modules.tex [41
+
+] [42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+[44] [45] [46] [47]) [48]
+Chapter 4.
+(./geom.tex [49
+
+] [50] [51] [52] [53] [54] [55] [56] [57] [58]) (./basis.tex
+[59] [60] [61] [62] [63] [64] [65]) (./la.tex [66] [67] [68] [69] [70]
+Overfull \hbox (2.65413pt too wide) in paragraph at lines 247--251
+\OT1/cmr/m/it/12 Note: \OT1/cmr/m/n/12 The ma-trix vec-tor prod-ucts $\OT1/cmr/
+bx/n/12 A\OML/cmm/m/it/12 x[]$ \OT1/cmr/m/n/12 are per-formed by the user- pro-
+vided rou-tine []\OT1/cmtt/m/n/12 product()
+ []
+
+[71]) (./symmetry.tex [72] [73] [74] [75] [76] [77] [78]
+Overfull \hbox (30.98038pt too wide) in paragraph at lines 346--351
+[]\OT1/cmr/m/n/12 This rou-tine uses the stan-dard three in-dex ex-change sym-m
+e-tries []\OT1/cmtt/m/n/12 (iat<->jat) []<-> [](kat<->lat)
+ []
+
+[79] [80] [81]) (./integral_api.tex [82]
+Chapter 5.
+[83
+
+]) [84]
+Chapter 6.
+(./numa.tex
+Overfull \hbox (10.57614pt too wide) in paragraph at lines 4--17
+\OT1/cmr/m/n/12 The Soft-ware De-vel-op-ment Toolkit is the foun-da-tion of the
+ func-tional ar-chi-tec-ture in NWChem.
+ []
+
+[85
+
+]) (./tcgmsg.tex [86]) (./ma.tex [87] [88] [89] [90] [91]) (./ga.tex
+[92] [93] [94]
+Overfull \hbox (17.55792pt too wide) in paragraph at lines 155--158
+[]\OT1/cmtt/m/n/12 ga[]create[]irreg(type, dim1, dim2, array[]name, map1, nbloc
+k1, map2, nblock2,
+ []
+
+[95]
+Overfull \hbox (12.37091pt too wide) in paragraph at lines 215--220
+[]\OT1/cmtt/m/n/12 ga[]ddot[]patch(g[]a, t[]a, ailo, aihi, ajlo, ajhi, g[]b, t[
+]b, bilo, bihi, bjlo,
+ []
+
+[96]
+Overfull \hbox (5.20792pt too wide) in paragraph at lines 245--248
+[]\OT1/cmtt/m/n/12 ga[]matmul[]patch(transa, transb, alpha, beta, g[]a, ailo, a
+ihi, ajlo, ajhi,
+ []
+
+[97] [98]
+Overfull \hbox (34.35393pt too wide) in paragraph at lines 341--345
+[]\OT1/cmtt/m/n/12 ga[]copy[]patch(trans, g[]a, ailo, aihi, ajlo, ajhi, g[]b, b
+ilo, bihi, bjlo, bjhi)
+ []
+
+[99] [100] [101] [102] [103]
+Overfull \hbox (2.25992pt too wide) in paragraph at lines 591--593
+[]\OT1/cmtt/m/n/12 ga[]get[]remote(g[]a, ilo, ihi, jlo, jhi, buf, offset, Id, p
+roc) \OT1/cmr/m/n/12 --- read an ar-
+ []
+
+
+Overfull \hbox (6.31868pt too wide) in paragraph at lines 599--601
+[]\OT1/cmtt/m/n/12 ga[]acc[]remote(g[]a, ilo, ihi, jlo, jhi, buf, offset, Id, p
+roc, alpha) \OT1/cmr/m/n/12 --- ac-
+ []
+
+[104]
+Overfull \hbox (5.33272pt too wide) in paragraph at lines 613--615
+[]\OT1/cmtt/m/n/12 ga[]brdcst[]clust(type, buf, len, originator, group) \OT1/cm
+r/m/n/12 --- in-ter-nal GA rou-tine that
+ []
+
+[105]) (./ChemIO.tex [106] [107]
+Overfull \hbox (24.24525pt too wide) in paragraph at lines 115--115
+[]      \OT1/cmtt/m/n/12 if(dra_terminate().ne.0)ERROR       ! destroy DRA inte
+rnal data structures[] 
+ []
+
+
+Overfull \hbox (10.6419pt too wide) in paragraph at lines 122--131
+[]\OT1/cmtt/m/n/12 status = dra[]init(max[]arrays, max[]array[]size, total[]dis
+k[]space, max[]memory)
+ []
+
+[108]
+Overfull \hbox (2.77287pt too wide) in paragraph at lines 143--152
+[]\OT1/cmtt/m/n/12 status = dra[]create(type,dim1,dim2,name,filename,mode,rdim1
+,rdim2,d[]a) \OT1/cmr/m/n/12 ---
+ []
+
+[109]
+Overfull \hbox (9.65392pt too wide) in paragraph at lines 201--209
+[]\OT1/cmtt/m/n/12 status = dra[]write[]section(transp, g[]a, gilo, gihi, gjlo,
+ gjhi, d[]a, dilo,
+ []
+
+[110]
+Overfull \hbox (3.47891pt too wide) in paragraph at lines 239--246
+[]\OT1/cmtt/m/n/12 status = dra[]read[]section(transp, g[]a, gilo, gihi, gjlo, 
+gjhi, d[]a, dilo,
+ []
+
+
+Overfull \hbox (24.74261pt too wide) in paragraph at lines 262--268
+[]\OT1/cmtt/m/n/12 status = dra[]probe(request, compl[]status) \OT1/cmr/m/n/12 
+--- tests for com-ple-tion of \OT1/cmtt/m/n/12 dra[]write/read
+ []
+
+
+Overfull \hbox (7.6097pt too wide) in paragraph at lines 274--278
+[]\OT1/cmtt/m/n/12 status = dra[]wait(request) \OT1/cmr/m/n/12 --- blocks op-er
+-a-tions un-til com-ple-tion of \OT1/cmtt/m/n/12 dra[]write/read
+ []
+
+[111] [112]
+Overfull \hbox (5.72025pt too wide) in paragraph at lines 383--383
+[]                                                          \OT1/cmtt/m/n/12 ma
+cro for int size?[] 
+ []
+
+[113] [114] [115] [116]
+Overfull \hbox (9.72278pt too wide) in paragraph at lines 547--557
+[]\OT1/cmtt/m/n/12 integer EAF[]ARead(fh, offset, buf, bytes, req[]id) \OT1/cmr
+/m/n/12 --- asyn-chronously reads from
+ []
+
+[117] [118]
+Overfull \hbox (11.89525pt too wide) in paragraph at lines 676--676
+[]        \OT1/cmtt/m/n/12 size_hard_limit  -- max file size in bytes not to be
+ exceeded (a hint)[] 
+ []
+
+[119]) (./rtdb.tex [120] [121] [122] [123] [124] [125] [126] [127] [128])
+[129] [130
+
+]
+Chapter 7.
+(./utilities.tex) (./ffinp.tex [131] [132] [133] [134]
+Overfull \hbox (30.21074pt too wide) in paragraph at lines 171--175
+[]\OT1/cmr/m/n/12 The func-tion []\OT1/cmtt/m/n/12 inp_ilist \OT1/cmr/m/n/12 re
+-turns []\OT1/cmtt/m/n/12 .true.\OT1/cmr/m/n/12 if the in-put is a valid in-te-
+ger list, and []\OT1/cmtt/m/n/12 .false.\OT1/cmr/m/n/12 otherwise,
+ []
+
+[135] [136] [137] [138]) (./ecce.tex [139] [140] [141] [142] [143]
+Underfull \vbox (badness 3396) has occurred while \output is active []
+
+ [144]
+[145] [146] [147]
+Overfull \hbox (0.7813pt too wide) in paragraph at lines 393--395
+[]\OT1/cmr/m/n/12 --- fre-quency pro-jected in-ten-si-ties in (de-bye/ang)2. 
+ []
+
+[148]) (./util.tex [149] [150] [151]
+Overfull \hbox (36.16113pt too wide) in paragraph at lines 108--111
+\OT1/cmr/m/n/12 The length of a file name can be large and also sys-tem de-pene
+-dent. The pa-ram-e-ter []\OT1/cmtt/m/n/12 NW_MAX_PATH_LEN
+ []
+
+[152] [153] [154] [155] [156] [157] [158] [159]
+Overfull \hbox (27.19644pt too wide) in paragraph at lines 504--510
+\OT1/cmr/m/n/12 strings to For-tran char-ac-ter strings ([]\OT1/cmtt/m/n/12 str
+ing_to_fortchar\OT1/cmr/m/n/12 ) and vice versa ([]\OT1/cmtt/m/n/12 fortchar_to
+_string\OT1/cmr/m/n/12 ).
+ []
+
+[160]) (./print_control.tex [161]
+Underfull \hbox (badness 1348) in paragraph at lines 78--81
+[]\OT1/cmr/m/n/12 Level is one of the pre-spec-i-fied print lev-els ([]\OT1/cmt
+t/m/n/12 print_none\OT1/cmr/m/n/12 , []\OT1/cmtt/m/n/12 print_low\OT1/cmr/m/n/1
+2 , ...; see
+ []
+
+[162] [163] [164]) [165] [166
+
+]
+Chapter 8.
+(./instaport.tex
+Underfull \vbox (badness 6792) has occurred while \output is active []
+
+ [167]
+[168]
+Overfull \hbox (1.51634pt too wide) in paragraph at lines 125--139
+ [] 
+ []
+
+
+Overfull \hbox (70.55003pt too wide) in paragraph at lines 148--199
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 123.20425pt on input line 200.
+
+) (./makefile_libs.tex [169] [170]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [171]
+[172] [173] [174] [175]) (./cvsintro.tex [176] [177] [178] [179] [180]
+Overfull \hbox (9.63445pt too wide) in paragraph at lines 331--337
+\OT1/cmr/m/n/12 Fix-ing this re-quires delet-ing files from the repos-i-tory. C
+on-tact \OT1/cmtt/m/n/12 nwchem-support@emsl.pnl.gov
+ []
+
+[181]) [182]
+Chapter 9.
+(./design.tex [183
+
+]) (./codingsty.tex [184] [185] [186] [187]
+Overfull \hbox (5.02277pt too wide) in paragraph at lines 195--195
+[]\OT1/cmr/bx/n/14.4 Naming of vari-ables hold-ing han-dles/pointers ob-tained 
+from
+ []
+
+[188] [189] [190] [191]) (./newmodules.tex) [192]
+Chapter 10.
+(./testing.tex [193
+
+]
+Overfull \hbox (11.5446pt too wide) in paragraph at lines 56--56
+ []   \OT1/cmtt/m/n/12 runtests.unix procs 2 h2o_dk u_sodft cosmo_h2o ch5n_nbo 
+h2s_finite[] 
+ []
+
+) [194]
+Chapter 11.
+(./newdoc.tex [195
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [196]
+[197] [198] [199]
+Overfull \hbox (5.72025pt too wide) in paragraph at lines 292--292
+[]\OT1/cmtt/m/n/12 c  This function sets the parallel access mode of all databa
+ses to {\tt mode}[] 
+ []
+
+[200] [201]) (./int_api_spec.tex [202]
+Appendix A.
+
+Overfull \hbox (9.90683pt too wide) in paragraph at lines 28--28
+[]\OT1/cmr/bx/n/17.28 INT-API: Ini-tial-iza-tion, In-te-gral Ac-cu-racy and Ter
+-
+ []
+
+[203
+
+] [204] [205] [206] [207] [208] [209]
+Overfull \hbox (11.89525pt too wide) in paragraph at lines 355--355
+[]      \OT1/cmtt/m/n/12 logical doV                ! [input] flag for potentia
+l energy integrals[] 
+ []
+
+[210] [211] [212]
+Overfull \hbox (11.89525pt too wide) in paragraph at lines 503--503
+[]      \OT1/cmtt/m/n/12 logical doV                ! [input] flag for potentia
+l energy integrals[] 
+ []
+
+[213] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224]
+Underfull \hbox (badness 5203) in paragraph at lines 1034--1034
+[]\OT1/cmr/m/n/12 all in-te-grals from this block
+ []
+
+[225] [226]
+Underfull \hbox (badness 5203) in paragraph at lines 1102--1102
+[]\OT1/cmr/m/n/12 all in-te-grals from this block
+ []
+
+[227]
+Overfull \hbox (14.37274pt too wide) in paragraph at lines 1147--1156
+[] 
+ []
+
+[228] [229]
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1287--1287
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 1e integral evaluation[] 
+ []
+
+[230]
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1304--1304
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 1e integral evaluation[] 
+ []
+
+
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1321--1321
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 1e integral evaluation[] 
+ []
+
+[231]
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1356--1356
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 2e integral evaluation[] 
+ []
+
+
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1373--1373
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 2e integral evaluation[] 
+ []
+
+[232]
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1390--1390
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 2e integral evaluation[] 
+ []
+
+
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1411--1411
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 2e integral evaluation[] 
+ []
+
+[233]
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1476--1476
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 1e integral evaluation[] 
+ []
+
+[234]
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1514--1514
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 1e integral evaluation[] 
+ []
+
+
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1529--1529
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 1e integral evaluation[] 
+ []
+
+[235]
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1545--1545
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 2e integral evaluation[] 
+ []
+
+
+Overfull \hbox (55.12027pt too wide) in paragraph at lines 1563--1563
+[]      \OT1/cmtt/m/n/12 integer memsize ! [output] max size of scratch space f
+or 2e integral evaluation[] 
+ []
+
+[236] [237] [238] [239]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [240]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [241]
+Overfull \hbox (24.31519pt too wide) in paragraph at lines 1846--1870
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 sp\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 sp\OT1/c
+mr/m/n/12 )$. The trans-for-ma-tion is done in place as fol-lows: [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [242]
+[243] [244] [245]) [246]
+Appendix B.
+(./pstat.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [247
+
+]
+[248] [249]
+Overfull \hbox (24.32976pt too wide) in paragraph at lines 124--135
+[]\OT1/cmr/m/n/12 In or-der to min-i-mize the over-head of check-ing which stat
+is-tics to col-lect in each PStat[]\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 On,Off\OMS
+/cmsy/m/n/12 g
+ []
+
+) [250]
+Appendix C.
+(./integral_io.tex
+Overfull \hbox (23.57278pt too wide) in paragraph at lines 2--2
+[]\OT1/cmr/bx/n/17.28 Application- and I/O-Level Views of the Data Stream 
+ []
+
+[251
+
+]
+Overfull \hbox (19.0399pt too wide) in paragraph at lines 43--47
+\OT1/cmr/m/n/12 ized by int2e[]buf[]cntr[]unpack and up-dated as the user ob-ta
+ins in-te-grals with int2e[]file[]read. 
+ []
+
+[252] [253] [254]
+Overfull \hbox (17.97145pt too wide) in paragraph at lines 193--196
+\OT1/cmr/m/n/12 Calling int2e[]set[]bf[]range also ter-mi-nates the cur-rent co
+unter (see int2e[]buf[]cntr[]\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 pack,unpack\OMS/
+cmsy/m/n/12 g\OT1/cmr/m/n/12 )
+ []
+
+) [255] [256
+
+]
+Appendix D.
+(./messages.tex) [257] (./prog.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 619 strings out of 494924
+ 7271 string characters out of 6180768
+ 60991 words of memory out of 5000000
+ 3859 multiletter control sequences out of 15000+600000
+ 22319 words of font info for 81 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 24i,9n,25p,174b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on prog.dvi (258 pages, 661792 bytes).

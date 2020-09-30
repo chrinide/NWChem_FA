@@ -1,0 +1,5 @@
+*
+* $Id$
+*
+      integer ipopcb, leadzb
+      common/selci_cbits/ ipopcb(-128:127), leadzb(-128:127)

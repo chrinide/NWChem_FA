@@ -1,0 +1,10 @@
+1.Main program: NWCHEM_TOP/src/nwchem.F
+2.Main DFT driver /home/shuyy/nwchem-7.0.0-release/src/nwdft/nwdft.F:      logical function nwdft(rtdb)
+		/home/shuyy/nwchem-7.0.0-release/src/nwdft/scf_dft/dft_main0d.F:      logical function dft_main0d(rtdb)
+
+
+sudo perf record -g -- (ur exe)~/nwchem-7.0.0-release/bin/LINUX64/nwchem job1 > job1.out
+sudo perf script | c++filt | gprof2dot -f perf | dot -Tpng -o output.png
+
+
+

@@ -1,0 +1,1035 @@
+ argument  1 = ./h3tr2.nw
+                                         
+                                         
+
+
+             Northwest Computational Chemistry Package (NWChem) 7.0.0
+             --------------------------------------------------------
+
+
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+
+                              Copyright (c) 1994-2019
+                       Pacific Northwest National Laboratory
+                            Battelle Memorial Institute
+
+             NWChem is an open-source computational chemistry package
+                        distributed under the terms of the
+                      Educational Community License (ECL) 2.0
+             A copy of the license is included with this distribution
+                              in the LICENSE.TXT file
+
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were developed at the
+            EMSL at Pacific Northwest National Laboratory, a multiprogram
+            national laboratory, operated for the U.S. Department of Energy
+            by Battelle under Contract Number DE-AC05-76RL01830. Support
+            for this work was provided by the Department of Energy Office
+            of Biological and Environmental Research, Office of Basic
+            Energy Sciences, and the Office of Advanced Scientific Computing.
+
+
+           Job information
+           ---------------
+
+    hostname        = shuyy-ThinkPad-P51
+    program         = /home/shuyy/nwchem-7.0.0-release/bin/LINUX64/nwchem
+    date            = Tue Sep 22 19:08:35 2020
+
+    compiled        = Tue_Sep_22_15:24:28_2020
+    source          = /home/shuyy/nwchem-7.0.0-release
+    nwchem branch   = 7.0.0
+    nwchem revision = N/A
+    ga revision     = 5.7.1
+    use scalapack   = F
+    input           = ./h3tr2.nw
+    prefix          = h3.
+    data base       = ./h3.db
+    status          = restart
+    nproc           =        1
+    time left       =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap     =   13107196 doubles =    100.0 Mbytes
+    stack    =   13107201 doubles =    100.0 Mbytes
+    global   =   26214400 doubles =    200.0 Mbytes (distinct from heap & stack)
+    total    =   52428797 doubles =    400.0 Mbytes
+    verify   = yes
+    hardfail = no 
+
+
+           Directory information
+           ---------------------
+
+  0 permanent = .
+  0 scratch   = .
+
+
+           Previous task information
+           -------------------------
+
+    Theory    = scf                             
+    Operation =                               
+    Status    = ok                            
+    Qmmm      = F
+    Ignore    = F
+
+
+           Geometries in the database
+           --------------------------
+
+       Name                              Natoms  Last Modified
+       --------------------------------  ------  ------------------------
+    1  geometry                               3  Tue Sep 22 19:08:35 2020  
+
+  The geometry named "geometry" is the default for restart
+
+
+
+           Basis sets in the database
+           --------------------------
+
+       Name                              Natoms  Last Modified
+        --------------------------------  ------  ------------------------
+    1  ao basis                               1  Tue Sep 22 19:08:30 2020  
+
+  The basis set named "ao basis" is the default AO basis for restart
+
+
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+                      Basis "ao basis" -> "" (cartesian)
+                      -----
+  h (Hydrogen)
+  ------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  5.44717800E+00  0.156285
+  1 S  8.24547000E-01  0.904691
+
+  2 S  1.83192000E-01  1.000000
+
+
+
+ Summary of "ao basis" -> "" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ h                           3-21G                   2        2   2s
+
+
+
+
+ DIRDYVTST - DiRect DYnamics for Variational Transition State Theory with the NWChem  electronic structure code
+
+     This code prepares the file30 input for POLYRATE from electronic structure calculations of gradients
+     hessians at the reactant, product, and saddle point geometries, and along the minimum energy path.
+     Cartesian geometries for the reactants, products, and saddle points need to be input to this code;
+     optimization for these geometries is not performed in the code.  Points along the minimum energy path
+     are calculated here.
+
+ Options, lgs=
+   1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+
+           Note that only lgs 1,2,6,8,27,31,38,39 are used.
+
+     lgs( 1)= 1, saddle point; MEP started along unbound eigenvector
+     lgs( 2)= 0, frequencies and eigenvectors at save points along MEP are not printed
+     lgs( 6)= 1,  2, reactants,  2, products
+     lgs( 8)= 1, restart
+     lgs(27)= 0, use original direction of unbound eigenvector at saddle point
+     lgs(31)= 1, MEP calculation uses euler integrator
+     lgs(38)= 0, No electronic structure files saved
+     lgs(39)= 0, No single point calculation  performed
+
+
+ Title:
+      Test run: H+H2 reaction, Euler integration, restart and extend MEP         
+
+
+ Number of atoms =     3
+
+
+ Masses
+                                  amu             a.u.            kg
+     Mass of atom  1           1.007825      1837.108749   1.673231E-27
+     Mass of atom  2           1.007825      1837.108749   1.673231E-27
+     Mass of atom  3           1.007825      1837.108749   1.673231E-27
+     Forward reduced mass      0.671899      1224.768271   1.115514E-27
+
+
+ Reactants
+
+     Input geometry (cartesian coordinates in au)
+      atom            x             y             z
+        1          0.00000       0.00000       0.00000
+        2          0.00000       0.00000       1.38861
+        3          0.00000       0.00000     190.00000
+
+     Species 1 consists of atom(s):    1  2
+          icode=    3
+
+     Species 2 consists of atom(s):    3
+          icode=    1
+
+
+ Products
+
+     Input geometry (cartesian coordinates in au)
+      atom            x             y             z
+        1          0.00000       0.00000     190.36121
+        2          0.00000       0.00000       1.38861
+        3          0.00000       0.00000       0.00000
+
+     Species 3 consists of atom(s):    2  3
+          icode=    3
+
+     Species 4 consists of atom(s):    1
+          icode=    1
+
+
+ Saddle point or starting geometry on MEP
+
+     Input geometry (cartesian coordinates in au)
+      atom            x             y             z
+        1          0.00000       0.00000      -1.76532
+        2          0.00000       0.00000       0.00000
+        3          0.00000       0.00000       1.76532
+          icode=    3
+
+ Mass scaled coordinates, rotated so principle axes are aligned
+
+     Reactants
+      atom            x             y             z
+        1          0.00000       0.00000     -78.13315
+        2          0.00000       0.00000     -76.43247
+        3          0.00000       0.00000     154.56561
+
+     Products
+      atom            x             y             z
+        1          0.00000       0.00000    -154.86054
+        2          0.00000       0.00000      76.57993
+        3          0.00000       0.00000      78.28061
+
+     Saddle point or starting geometry on MEP
+      atom            x             y             z
+        1          0.00000       0.00000      -2.16204
+        2          0.00000       0.00000       0.00000
+        3          0.00000       0.00000       2.16204
+
+
+ Parameters for MEP calculation
+
+     Step size, dels=  0.010000
+     Interval for saving Hessian data, delsv =  0.050000
+     Interval for computing Hessian data, delhss =  0.050000
+     Path also stopped if s .gt.  0.750000 or s .lt. -0.750000
+
+
+ Sort data in file 30 so points along MEP have the reaction coordinate in ascending order.
+ Also calculate the values of the reaction coordinate at the reactant and product geometries
+  and shift energies so reactant v is zero.
+
+ Summary of sorted data (all units are atomic)
+     R = reactants, P = products, * = saddle point or starting geometry
+
+         s           V               x (mass weighted)
+ R   -186.77046  0.00000E+00         0.0000   0.0000 -78.1331   0.0000   0.0000 -76.4325   0.0000   0.0000 154.5656
+ P    187.13167 -1.75415E-14         0.0000   0.0000-154.8605   0.0000   0.0000  76.5799   0.0000   0.0000  78.2806
+ *      0.00000  2.70840E-02         0.0000   0.0000  -2.1620   0.0000   0.0000   0.0000   0.0000   0.0000   2.1620
+  
+       -0.50000  1.82633E-02        -0.0000   0.0000  -2.1159   0.0000  -0.0000  -0.3606  -0.0000   0.0000   2.4764
+       -0.45000  1.93123E-02        -0.0000   0.0000  -2.1030   0.0000  -0.0000  -0.3335  -0.0000   0.0000   2.4364
+       -0.40000  2.03870E-02        -0.0000   0.0000  -2.0930   0.0000  -0.0000  -0.3042  -0.0000   0.0000   2.3972
+       -0.35000  2.14840E-02        -0.0000   0.0000  -2.0869   0.0000  -0.0000  -0.2723  -0.0000   0.0000   2.3592
+       -0.30000  2.25958E-02        -0.0000   0.0000  -2.0858   0.0000  -0.0000  -0.2375  -0.0000   0.0000   2.3233
+       -0.25000  2.37015E-02        -0.0000   0.0000  -2.0896   0.0000  -0.0000  -0.2004  -0.0000   0.0000   2.2900
+       -0.20000  2.47571E-02        -0.0000   0.0000  -2.0980   0.0000  -0.0000  -0.1617  -0.0000   0.0000   2.2596
+       -0.15000  2.56955E-02        -0.0000   0.0000  -2.1100   0.0000  -0.0000  -0.1219  -0.0000   0.0000   2.2319
+       -0.10000  2.64394E-02        -0.0000   0.0000  -2.1251   0.0000  -0.0000  -0.0815  -0.0000   0.0000   2.2065
+       -0.05000  2.69185E-02        -0.0000   0.0000  -2.1425   0.0000  -0.0000  -0.0408  -0.0000   0.0000   2.1833
+        0.05000  2.69185E-02         0.0000  -0.0000  -2.1833  -0.0000   0.0000   0.0408   0.0000  -0.0000   2.1425
+        0.10000  2.64394E-02         0.0000  -0.0000  -2.2065  -0.0000   0.0000   0.0815   0.0000  -0.0000   2.1251
+        0.15000  2.56955E-02         0.0000  -0.0000  -2.2319  -0.0000   0.0000   0.1219   0.0000  -0.0000   2.1100
+        0.20000  2.47571E-02         0.0000  -0.0000  -2.2596  -0.0000   0.0000   0.1617   0.0000  -0.0000   2.0980
+        0.25000  2.37015E-02         0.0000  -0.0000  -2.2900  -0.0000   0.0000   0.2004   0.0000  -0.0000   2.0896
+        0.30000  2.25958E-02         0.0000  -0.0000  -2.3233  -0.0000   0.0000   0.2375   0.0000  -0.0000   2.0858
+        0.35000  2.14840E-02         0.0000  -0.0000  -2.3592  -0.0000   0.0000   0.2723   0.0000  -0.0000   2.0869
+        0.40000  2.03870E-02         0.0000  -0.0000  -2.3972  -0.0000   0.0000   0.3042   0.0000  -0.0000   2.0930
+        0.45000  1.93123E-02         0.0000  -0.0000  -2.4364  -0.0000   0.0000   0.3335   0.0000  -0.0000   2.1030
+        0.50000  1.82633E-02         0.0000  -0.0000  -2.4764  -0.0000   0.0000   0.3606   0.0000  -0.0000   2.1159
+
+
+ ********** Calculate points along reaction path
+
+      dels=          1.00000E-02
+      delsv=         5.00000E-02
+      delhss=        5.00000E-02
+      dir=           1.00000E+00
+      slm=          -7.50000E-01
+      slp=           7.50000E-01
+
+ Path followed using Euler integrator
+
+ Take step from restart geometry in reactant direction
+
+  All quantities in atomic units, x is vector of mass-weighted coordinates,
+  dx is the normalized mass-weighted gradient vector, and |dV/x| is the magnitude of the gradient
+         s       V,|dV/dx|
+       -0.50000  1.82633E-02    x=  -0.0000   0.0000  -2.1159   0.0000  -0.0000  -0.3606  -0.0000   0.0000   2.4764
+                 2.07016E-02   dx=   0.0000   0.0000   0.2836   0.0000   0.0000   0.5212   0.0000   0.0000  -0.8049
+ Symmetry group is C4V
+       -0.51000  1.80569E-02    x=  -0.0000   0.0000  -2.1187   0.0000  -0.0000  -0.3658  -0.0000   0.0000   2.4845
+                 2.05846E-02   dx=   0.0000   0.0000   0.2907   0.0000   0.0000   0.5154   0.0000   0.0000  -0.8061
+ Symmetry group is C4V
+       -0.52000  1.78516E-02    x=  -0.0000   0.0000  -2.1216   0.0000  -0.0000  -0.3709  -0.0000   0.0000   2.4925
+                 2.04651E-02   dx=   0.0000   0.0000   0.2972   0.0000   0.0000   0.5100   0.0000   0.0000  -0.8072
+ Symmetry group is C4V
+       -0.53000  1.76476E-02    x=  -0.0000   0.0000  -2.1246   0.0000  -0.0000  -0.3760  -0.0000   0.0000   2.5006
+                 2.03432E-02   dx=   0.0000   0.0000   0.3031   0.0000   0.0000   0.5050   0.0000   0.0000  -0.8081
+ Symmetry group is C4V
+       -0.54000  1.74447E-02    x=  -0.0000   0.0000  -2.1276   0.0000  -0.0000  -0.3811  -0.0000   0.0000   2.5087
+                 2.02188E-02   dx=   0.0000   0.0000   0.3086   0.0000   0.0000   0.5003   0.0000   0.0000  -0.8090
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    8.6891736175975787E-003
+ SCF residual:    4.8955423660249914E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0395     [    0.1896]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0486     [   -0.2336]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0092     [    0.0440]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0395     [    0.1896]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0486     [   -0.2336]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0092     [    0.0440]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =    -0.1194     [   -0.5733]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0513     [    0.2465]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =     0.0680     [    0.3268]
+  
+  
+       -0.55000  1.72432E-02    x=  -0.0000   0.0000  -2.1307   0.0000  -0.0000  -0.3861  -0.0000   0.0000   2.5168
+                 2.00922E-02   dx=   0.0000   0.0000   0.3137   0.0000   0.0000   0.4960   0.0000   0.0000  -0.8097
+ Symmetry group is C4V
+       -0.56000  1.70429E-02    x=  -0.0000   0.0000  -2.1338   0.0000  -0.0000  -0.3910  -0.0000   0.0000   2.5249
+                 1.99633E-02   dx=   0.0000   0.0000   0.3184   0.0000   0.0000   0.4919   0.0000   0.0000  -0.8103
+ Symmetry group is C4V
+       -0.57000  1.68439E-02    x=  -0.0000   0.0000  -2.1370   0.0000  -0.0000  -0.3960  -0.0000   0.0000   2.5330
+                 1.98324E-02   dx=   0.0000   0.0000   0.3228   0.0000   0.0000   0.4881   0.0000   0.0000  -0.8109
+ Symmetry group is C4V
+       -0.58000  1.66463E-02    x=  -0.0000   0.0000  -2.1402   0.0000  -0.0000  -0.4008  -0.0000   0.0000   2.5411
+                 1.96994E-02   dx=   0.0000   0.0000   0.3268   0.0000   0.0000   0.4846   0.0000   0.0000  -0.8114
+ Symmetry group is C4V
+       -0.59000  1.64500E-02    x=  -0.0000   0.0000  -2.1435   0.0000  -0.0000  -0.4057  -0.0000   0.0000   2.5492
+                 1.95645E-02   dx=   0.0000   0.0000   0.3305   0.0000   0.0000   0.4813   0.0000   0.0000  -0.8118
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    9.0544097887885755E-003
+ SCF residual:    4.3409145807035401E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0370     [    0.1775]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0455     [   -0.2186]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0086     [    0.0411]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0370     [    0.1775]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0455     [   -0.2186]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0086     [    0.0411]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =    -0.1144     [   -0.5497]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0455     [    0.2184]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =     0.0690     [    0.3313]
+  
+  
+       -0.60000  1.62550E-02    x=  -0.0000   0.0000  -2.1468   0.0000  -0.0000  -0.4105  -0.0000   0.0000   2.5573
+                 1.94278E-02   dx=   0.0000   0.0000   0.3340   0.0000   0.0000   0.4782   0.0000   0.0000  -0.8122
+ Symmetry group is C4V
+       -0.61000  1.60614E-02    x=  -0.0000   0.0000  -2.1502   0.0000  -0.0000  -0.4153  -0.0000   0.0000   2.5654
+                 1.92894E-02   dx=   0.0000   0.0000   0.3373   0.0000   0.0000   0.4753   0.0000   0.0000  -0.8126
+ Symmetry group is C4V
+       -0.62000  1.58692E-02    x=  -0.0000   0.0000  -2.1535   0.0000  -0.0000  -0.4200  -0.0000   0.0000   2.5736
+                 1.91495E-02   dx=   0.0000   0.0000   0.3403   0.0000   0.0000   0.4726   0.0000   0.0000  -0.8129
+ Symmetry group is C4V
+       -0.63000  1.56784E-02    x=  -0.0000   0.0000  -2.1569   0.0000  -0.0000  -0.4248  -0.0000   0.0000   2.5817
+                 1.90081E-02   dx=   0.0000   0.0000   0.3432   0.0000   0.0000   0.4700   0.0000   0.0000  -0.8132
+ Symmetry group is C4V
+       -0.64000  1.54890E-02    x=  -0.0000   0.0000  -2.1604   0.0000  -0.0000  -0.4295  -0.0000   0.0000   2.5898
+                 1.88653E-02   dx=   0.0000   0.0000   0.3459   0.0000   0.0000   0.4676   0.0000   0.0000  -0.8135
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    9.1967876389811298E-003
+ SCF residual:    3.8485551589191675E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0345     [    0.1655]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0425     [   -0.2043]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0081     [    0.0388]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0345     [    0.1655]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0425     [   -0.2043]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0081     [    0.0388]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =    -0.1097     [   -0.5269]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0409     [    0.1963]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =     0.0688     [    0.3305]
+  
+  
+       -0.65000  1.53011E-02    x=  -0.0000   0.0000  -2.1638   0.0000  -0.0000  -0.4341  -0.0000   0.0000   2.5980
+                 1.87212E-02   dx=   0.0000   0.0000   0.3484   0.0000   0.0000   0.4653   0.0000   0.0000  -0.8137
+ Symmetry group is C4V
+       -0.66000  1.51146E-02    x=  -0.0000   0.0000  -2.1673   0.0000  -0.0000  -0.4388  -0.0000   0.0000   2.6061
+                 1.85760E-02   dx=   0.0000   0.0000   0.3508   0.0000   0.0000   0.4631   0.0000   0.0000  -0.8139
+ Symmetry group is C4V
+       -0.67000  1.49296E-02    x=  -0.0000   0.0000  -2.1708   0.0000  -0.0000  -0.4434  -0.0000   0.0000   2.6142
+                 1.84297E-02   dx=   0.0000   0.0000   0.3531   0.0000   0.0000   0.4611   0.0000   0.0000  -0.8141
+ Symmetry group is C4V
+       -0.68000  1.47460E-02    x=  -0.0000   0.0000  -2.1743   0.0000  -0.0000  -0.4480  -0.0000   0.0000   2.6224
+                 1.82824E-02   dx=   0.0000   0.0000   0.3552   0.0000   0.0000   0.4591   0.0000   0.0000  -0.8143
+ Symmetry group is C4V
+       -0.69000  1.45639E-02    x=  -0.0000   0.0000  -2.1779   0.0000  -0.0000  -0.4526  -0.0000   0.0000   2.6305
+                 1.81342E-02   dx=   0.0000   0.0000   0.3572   0.0000   0.0000   0.4572   0.0000   0.0000  -0.8145
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    9.2106909973403983E-003
+ SCF residual:    3.4182556396251846E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0320     [    0.1537]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0397     [   -0.1907]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0077     [    0.0370]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0320     [    0.1537]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0397     [   -0.1907]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0077     [    0.0370]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =    -0.1051     [   -0.5049]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0373     [    0.1792]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =     0.0678     [    0.3257]
+  
+  
+       -0.70000  1.43834E-02    x=  -0.0000   0.0000  -2.1815   0.0000  -0.0000  -0.4572  -0.0000   0.0000   2.6387
+                 1.79853E-02   dx=   0.0000   0.0000   0.3592   0.0000   0.0000   0.4554   0.0000   0.0000  -0.8146
+ Symmetry group is C4V
+       -0.71000  1.42042E-02    x=  -0.0000   0.0000  -2.1851   0.0000  -0.0000  -0.4617  -0.0000   0.0000   2.6468
+                 1.78355E-02   dx=   0.0000   0.0000   0.3610   0.0000   0.0000   0.4537   0.0000   0.0000  -0.8147
+ Symmetry group is C4V
+       -0.72000  1.40266E-02    x=  -0.0000   0.0000  -2.1887   0.0000  -0.0000  -0.4663  -0.0000   0.0000   2.6550
+                 1.76852E-02   dx=   0.0000   0.0000   0.3628   0.0000   0.0000   0.4521   0.0000   0.0000  -0.8149
+ Symmetry group is C4V
+       -0.73000  1.38505E-02    x=  -0.0000   0.0000  -2.1923   0.0000  -0.0000  -0.4708  -0.0000   0.0000   2.6631
+                 1.75342E-02   dx=   0.0000   0.0000   0.3644   0.0000   0.0000   0.4505   0.0000   0.0000  -0.8150
+ Symmetry group is C4V
+       -0.74000  1.36760E-02    x=  -0.0000   0.0000  -2.1959   0.0000  -0.0000  -0.4753  -0.0000   0.0000   2.6713
+                 1.73828E-02   dx=   0.0000   0.0000   0.3660   0.0000   0.0000   0.4490   0.0000   0.0000  -0.8151
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    9.1510682696140933E-003
+ SCF residual:    3.0471448643965558E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0296     [    0.1422]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0370     [   -0.1778]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0074     [    0.0356]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0296     [    0.1422]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0370     [   -0.1778]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0074     [    0.0356]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =    -0.1007     [   -0.4838]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0346     [    0.1662]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =     0.0661     [    0.3176]
+  
+  
+       -0.75000  1.35029E-02    x=  -0.0000   0.0000  -2.1996   0.0000  -0.0000  -0.4798  -0.0000   0.0000   2.6794
+                 1.72309E-02   dx=   0.0000   0.0000   0.3676   0.0000   0.0000   0.4476   0.0000   0.0000  -0.8152
+
+ Take step from restart geometry in product direction
+
+  All quantities in atomic units, x is vector of mass-weighted coordinates,
+  dx is the normalized mass-weighted gradient vector, and |dV/x| is the magnitude of the gradient
+         s       V,|dV/dx|
+        0.50000  1.82633E-02    x=   0.0000  -0.0000  -2.4764  -0.0000   0.0000   0.3606   0.0000  -0.0000   2.1159
+                 2.07016E-02   dx=   0.0000   0.0000   0.8049   0.0000   0.0000  -0.5212   0.0000   0.0000  -0.2836
+ Symmetry group is C4V
+        0.51000  1.80569E-02    x=   0.0000  -0.0000  -2.4845  -0.0000   0.0000   0.3658   0.0000  -0.0000   2.1187
+                 2.05846E-02   dx=   0.0000   0.0000   0.8061   0.0000   0.0000  -0.5154   0.0000   0.0000  -0.2907
+ Symmetry group is C4V
+        0.52000  1.78516E-02    x=   0.0000  -0.0000  -2.4925  -0.0000   0.0000   0.3709   0.0000  -0.0000   2.1216
+                 2.04651E-02   dx=   0.0000   0.0000   0.8072   0.0000   0.0000  -0.5100   0.0000   0.0000  -0.2972
+ Symmetry group is C4V
+        0.53000  1.76476E-02    x=   0.0000  -0.0000  -2.5006  -0.0000   0.0000   0.3760   0.0000  -0.0000   2.1246
+                 2.03432E-02   dx=   0.0000   0.0000   0.8081   0.0000   0.0000  -0.5050   0.0000   0.0000  -0.3031
+ Symmetry group is C4V
+        0.54000  1.74447E-02    x=   0.0000  -0.0000  -2.5087  -0.0000   0.0000   0.3811   0.0000  -0.0000   2.1276
+                 2.02188E-02   dx=   0.0000   0.0000   0.8090   0.0000   0.0000  -0.5003   0.0000   0.0000  -0.3086
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    3.6612956694863641E-002
+ SCF residual:    4.8955423695294155E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0092     [    0.0440]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0486     [   -0.2336]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0395     [    0.1896]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0092     [    0.0440]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0486     [   -0.2336]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0395     [    0.1896]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =     0.0680     [    0.3268]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0513     [    0.2465]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =    -0.1194     [   -0.5733]
+  
+  
+        0.55000  1.72432E-02    x=   0.0000  -0.0000  -2.5168  -0.0000   0.0000   0.3861   0.0000  -0.0000   2.1307
+                 2.00922E-02   dx=   0.0000   0.0000   0.8097   0.0000   0.0000  -0.4960   0.0000   0.0000  -0.3137
+ Symmetry group is C4V
+        0.56000  1.70429E-02    x=   0.0000  -0.0000  -2.5249  -0.0000   0.0000   0.3910   0.0000  -0.0000   2.1338
+                 1.99633E-02   dx=   0.0000   0.0000   0.8103   0.0000   0.0000  -0.4919   0.0000   0.0000  -0.3184
+ Symmetry group is C4V
+        0.57000  1.68439E-02    x=   0.0000  -0.0000  -2.5330  -0.0000   0.0000   0.3960   0.0000  -0.0000   2.1370
+                 1.98324E-02   dx=   0.0000   0.0000   0.8109   0.0000   0.0000  -0.4881   0.0000   0.0000  -0.3228
+ Symmetry group is C4V
+        0.58000  1.66463E-02    x=   0.0000  -0.0000  -2.5411  -0.0000   0.0000   0.4008   0.0000  -0.0000   2.1402
+                 1.96994E-02   dx=   0.0000   0.0000   0.8114   0.0000   0.0000  -0.4846   0.0000   0.0000  -0.3268
+ Symmetry group is C4V
+        0.59000  1.64500E-02    x=   0.0000  -0.0000  -2.5492  -0.0000   0.0000   0.4057   0.0000  -0.0000   2.1435
+                 1.95645E-02   dx=   0.0000   0.0000   0.8118   0.0000   0.0000  -0.4813   0.0000   0.0000  -0.3305
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    9.0544097890372655E-003
+ SCF residual:    4.3409145887773597E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0086     [    0.0411]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0455     [   -0.2186]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0370     [    0.1775]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0086     [    0.0411]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0455     [   -0.2186]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0370     [    0.1775]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =     0.0690     [    0.3313]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0455     [    0.2184]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =    -0.1144     [   -0.5497]
+  
+  
+        0.60000  1.62550E-02    x=   0.0000  -0.0000  -2.5573  -0.0000   0.0000   0.4105   0.0000  -0.0000   2.1468
+                 1.94278E-02   dx=   0.0000   0.0000   0.8122   0.0000   0.0000  -0.4782   0.0000   0.0000  -0.3340
+ Symmetry group is C4V
+        0.61000  1.60614E-02    x=   0.0000  -0.0000  -2.5654  -0.0000   0.0000   0.4153   0.0000  -0.0000   2.1502
+                 1.92894E-02   dx=   0.0000   0.0000   0.8126   0.0000   0.0000  -0.4753   0.0000   0.0000  -0.3373
+ Symmetry group is C4V
+        0.62000  1.58692E-02    x=   0.0000  -0.0000  -2.5736  -0.0000   0.0000   0.4200   0.0000  -0.0000   2.1535
+                 1.91495E-02   dx=   0.0000   0.0000   0.8129   0.0000   0.0000  -0.4726   0.0000   0.0000  -0.3403
+ Symmetry group is C4V
+        0.63000  1.56784E-02    x=   0.0000  -0.0000  -2.5817  -0.0000   0.0000   0.4248   0.0000  -0.0000   2.1569
+                 1.90081E-02   dx=   0.0000   0.0000   0.8132   0.0000   0.0000  -0.4700   0.0000   0.0000  -0.3432
+ Symmetry group is C4V
+        0.64000  1.54890E-02    x=   0.0000  -0.0000  -2.5898  -0.0000   0.0000   0.4295   0.0000  -0.0000   2.1604
+                 1.88653E-02   dx=   0.0000   0.0000   0.8135   0.0000   0.0000  -0.4676   0.0000   0.0000  -0.3459
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    9.1967876389729142E-003
+ SCF residual:    3.8485551542061174E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0081     [    0.0388]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0425     [   -0.2043]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0345     [    0.1655]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0081     [    0.0388]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0425     [   -0.2043]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0345     [    0.1655]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =     0.0688     [    0.3305]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0409     [    0.1963]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =    -0.1097     [   -0.5269]
+  
+  
+        0.65000  1.53011E-02    x=   0.0000  -0.0000  -2.5980  -0.0000   0.0000   0.4341   0.0000  -0.0000   2.1638
+                 1.87212E-02   dx=   0.0000   0.0000   0.8137   0.0000   0.0000  -0.4653   0.0000   0.0000  -0.3484
+ Symmetry group is C4V
+        0.66000  1.51146E-02    x=   0.0000  -0.0000  -2.6061  -0.0000   0.0000   0.4388   0.0000  -0.0000   2.1673
+                 1.85760E-02   dx=   0.0000   0.0000   0.8139   0.0000   0.0000  -0.4631   0.0000   0.0000  -0.3508
+ Symmetry group is C4V
+        0.67000  1.49296E-02    x=   0.0000  -0.0000  -2.6142  -0.0000   0.0000   0.4434   0.0000  -0.0000   2.1708
+                 1.84297E-02   dx=   0.0000   0.0000   0.8141   0.0000   0.0000  -0.4611   0.0000   0.0000  -0.3531
+ Symmetry group is C4V
+        0.68000  1.47460E-02    x=   0.0000  -0.0000  -2.6224  -0.0000   0.0000   0.4480   0.0000  -0.0000   2.1743
+                 1.82824E-02   dx=   0.0000   0.0000   0.8143   0.0000   0.0000  -0.4591   0.0000   0.0000  -0.3552
+ Symmetry group is C4V
+        0.69000  1.45639E-02    x=   0.0000  -0.0000  -2.6305  -0.0000   0.0000   0.4526   0.0000  -0.0000   2.1779
+                 1.81342E-02   dx=   0.0000   0.0000   0.8145   0.0000   0.0000  -0.4572   0.0000   0.0000  -0.3572
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    9.2106909972222706E-003
+ SCF residual:    3.4182556343844716E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0077     [    0.0370]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0397     [   -0.1907]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0320     [    0.1537]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0077     [    0.0370]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0397     [   -0.1907]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0320     [    0.1537]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =     0.0678     [    0.3257]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0373     [    0.1792]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =    -0.1051     [   -0.5049]
+  
+  
+        0.70000  1.43834E-02    x=   0.0000  -0.0000  -2.6387  -0.0000   0.0000   0.4572   0.0000  -0.0000   2.1815
+                 1.79853E-02   dx=   0.0000   0.0000   0.8146   0.0000   0.0000  -0.4554   0.0000   0.0000  -0.3592
+ Symmetry group is C4V
+        0.71000  1.42042E-02    x=   0.0000  -0.0000  -2.6468  -0.0000   0.0000   0.4617   0.0000  -0.0000   2.1851
+                 1.78355E-02   dx=   0.0000   0.0000   0.8147   0.0000   0.0000  -0.4537   0.0000   0.0000  -0.3610
+ Symmetry group is C4V
+        0.72000  1.40266E-02    x=   0.0000  -0.0000  -2.6550  -0.0000   0.0000   0.4663   0.0000  -0.0000   2.1887
+                 1.76852E-02   dx=   0.0000   0.0000   0.8149   0.0000   0.0000  -0.4521   0.0000   0.0000  -0.3628
+ Symmetry group is C4V
+        0.73000  1.38505E-02    x=   0.0000  -0.0000  -2.6631  -0.0000   0.0000   0.4708   0.0000  -0.0000   2.1923
+                 1.75342E-02   dx=   0.0000   0.0000   0.8150   0.0000   0.0000  -0.4505   0.0000   0.0000  -0.3644
+ Symmetry group is C4V
+        0.74000  1.36760E-02    x=   0.0000  -0.0000  -2.6713  -0.0000   0.0000   0.4753   0.0000  -0.0000   2.1959
+                 1.73828E-02   dx=   0.0000   0.0000   0.8151   0.0000   0.0000  -0.4490   0.0000   0.0000  -0.3660
+ Symmetry group is C4V
+ Restarting calculation
+  cannot reuse RHS because of enuc mismatch    9.1510682697142354E-003
+ SCF residual:    3.0471448642194623E-007
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0074     [    0.0356]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =    -0.0370     [   -0.1778]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,x> =     0.0296     [    0.1422]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0074     [    0.0356]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =    -0.0370     [   -0.1778]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.0296     [    0.1422]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =     0.0661     [    0.3176]
+ d_dipole_z/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.0346     [    0.1662]
+ d_dipole_z/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =    -0.1007     [   -0.4838]
+  
+  
+        0.75000  1.35029E-02    x=   0.0000  -0.0000  -2.6794  -0.0000   0.0000   0.4798   0.0000  -0.0000   2.1996
+                 1.72309E-02   dx=   0.0000   0.0000   0.8152   0.0000   0.0000  -0.4476   0.0000   0.0000  -0.3676
+
+
+ Sort data in file 30 so points along MEP have the reaction coordinate in ascending order.
+ Also calculate the values of the reaction coordinate at the reactant and product geometries
+  and shift energies so reactant v is zero.
+
+ Summary of sorted data (all units are atomic)
+     R = reactants, P = products, * = saddle point or starting geometry
+
+         s           V               x (mass weighted)
+ R   -186.77185  0.00000E+00         0.0000   0.0000 -78.1331   0.0000   0.0000 -76.4325   0.0000   0.0000 154.5656
+ P    187.13306 -1.75415E-14         0.0000   0.0000-154.8605   0.0000   0.0000  76.5799   0.0000   0.0000  78.2806
+ *      0.00000  2.70840E-02         0.0000   0.0000  -2.1620   0.0000   0.0000   0.0000   0.0000   0.0000   2.1620
+  
+       -0.75000  1.35029E-02        -0.0000   0.0000  -2.1996   0.0000  -0.0000  -0.4798  -0.0000   0.0000   2.6794
+       -0.70000  1.43834E-02        -0.0000   0.0000  -2.1815   0.0000  -0.0000  -0.4572  -0.0000   0.0000   2.6387
+       -0.65000  1.53011E-02        -0.0000   0.0000  -2.1638   0.0000  -0.0000  -0.4341  -0.0000   0.0000   2.5980
+       -0.60000  1.62550E-02        -0.0000   0.0000  -2.1468   0.0000  -0.0000  -0.4105  -0.0000   0.0000   2.5573
+       -0.55000  1.72432E-02        -0.0000   0.0000  -2.1307   0.0000  -0.0000  -0.3861  -0.0000   0.0000   2.5168
+       -0.50000  1.82633E-02        -0.0000   0.0000  -2.1159   0.0000  -0.0000  -0.3606  -0.0000   0.0000   2.4764
+       -0.45000  1.93123E-02        -0.0000   0.0000  -2.1030   0.0000  -0.0000  -0.3335  -0.0000   0.0000   2.4364
+       -0.40000  2.03870E-02        -0.0000   0.0000  -2.0930   0.0000  -0.0000  -0.3042  -0.0000   0.0000   2.3972
+       -0.35000  2.14840E-02        -0.0000   0.0000  -2.0869   0.0000  -0.0000  -0.2723  -0.0000   0.0000   2.3592
+       -0.30000  2.25958E-02        -0.0000   0.0000  -2.0858   0.0000  -0.0000  -0.2375  -0.0000   0.0000   2.3233
+       -0.25000  2.37015E-02        -0.0000   0.0000  -2.0896   0.0000  -0.0000  -0.2004  -0.0000   0.0000   2.2900
+       -0.20000  2.47571E-02        -0.0000   0.0000  -2.0980   0.0000  -0.0000  -0.1617  -0.0000   0.0000   2.2596
+       -0.15000  2.56955E-02        -0.0000   0.0000  -2.1100   0.0000  -0.0000  -0.1219  -0.0000   0.0000   2.2319
+       -0.10000  2.64394E-02        -0.0000   0.0000  -2.1251   0.0000  -0.0000  -0.0815  -0.0000   0.0000   2.2065
+       -0.05000  2.69185E-02        -0.0000   0.0000  -2.1425   0.0000  -0.0000  -0.0408  -0.0000   0.0000   2.1833
+        0.05000  2.69185E-02         0.0000  -0.0000  -2.1833  -0.0000   0.0000   0.0408   0.0000  -0.0000   2.1425
+        0.10000  2.64394E-02         0.0000  -0.0000  -2.2065  -0.0000   0.0000   0.0815   0.0000  -0.0000   2.1251
+        0.15000  2.56955E-02         0.0000  -0.0000  -2.2319  -0.0000   0.0000   0.1219   0.0000  -0.0000   2.1100
+        0.20000  2.47571E-02         0.0000  -0.0000  -2.2596  -0.0000   0.0000   0.1617   0.0000  -0.0000   2.0980
+        0.25000  2.37015E-02         0.0000  -0.0000  -2.2900  -0.0000   0.0000   0.2004   0.0000  -0.0000   2.0896
+        0.30000  2.25958E-02         0.0000  -0.0000  -2.3233  -0.0000   0.0000   0.2375   0.0000  -0.0000   2.0858
+        0.35000  2.14840E-02         0.0000  -0.0000  -2.3592  -0.0000   0.0000   0.2723   0.0000  -0.0000   2.0869
+        0.40000  2.03870E-02         0.0000  -0.0000  -2.3972  -0.0000   0.0000   0.3042   0.0000  -0.0000   2.0930
+        0.45000  1.93123E-02         0.0000  -0.0000  -2.4364  -0.0000   0.0000   0.3335   0.0000  -0.0000   2.1030
+        0.50000  1.82633E-02         0.0000  -0.0000  -2.4764  -0.0000   0.0000   0.3606   0.0000  -0.0000   2.1159
+        0.55000  1.72432E-02         0.0000  -0.0000  -2.5168  -0.0000   0.0000   0.3861   0.0000  -0.0000   2.1307
+        0.60000  1.62550E-02         0.0000  -0.0000  -2.5573  -0.0000   0.0000   0.4105   0.0000  -0.0000   2.1468
+        0.65000  1.53011E-02         0.0000  -0.0000  -2.5980  -0.0000   0.0000   0.4341   0.0000  -0.0000   2.1638
+        0.70000  1.43834E-02         0.0000  -0.0000  -2.6387  -0.0000   0.0000   0.4572   0.0000  -0.0000   2.1815
+        0.75000  1.35029E-02         0.0000  -0.0000  -2.6794  -0.0000   0.0000   0.4798   0.0000  -0.0000   2.1996
+
+
+ Summary of MEP data
+     R = reactants, P = products, * = saddle point or starting geometry
+
+  Cartesian coordinates, x
+
+        s (au)   V (kcal/mol)        x (Angstroms)
+ R   -186.77185  0.00000E+00
+ P    187.13306 -1.10075E-11
+ *      0.00000  1.69954E+01         0.0000   0.0000  -0.9342   0.0000   0.0000   0.0000   0.0000   0.0000   0.9342
+       -0.75000  8.47319E+00        -0.0000   0.0000  -0.9504   0.0000  -0.0000  -0.2073  -0.0000   0.0000   1.1577
+       -0.70000  9.02569E+00        -0.0000   0.0000  -0.9426   0.0000  -0.0000  -0.1975  -0.0000   0.0000   1.1401
+       -0.65000  9.60159E+00        -0.0000   0.0000  -0.9349   0.0000  -0.0000  -0.1876  -0.0000   0.0000   1.1225
+       -0.60000  1.02002E+01        -0.0000   0.0000  -0.9276   0.0000  -0.0000  -0.1774  -0.0000   0.0000   1.1050
+       -0.55000  1.08203E+01        -0.0000   0.0000  -0.9206   0.0000  -0.0000  -0.1668  -0.0000   0.0000   1.0874
+       -0.50000  1.14604E+01        -0.0000   0.0000  -0.9142   0.0000  -0.0000  -0.1558  -0.0000   0.0000   1.0700
+       -0.45000  1.21186E+01        -0.0000   0.0000  -0.9086   0.0000  -0.0000  -0.1441  -0.0000   0.0000   1.0527
+       -0.40000  1.27930E+01        -0.0000   0.0000  -0.9043   0.0000  -0.0000  -0.1314  -0.0000   0.0000   1.0358
+       -0.35000  1.34814E+01        -0.0000   0.0000  -0.9017   0.0000  -0.0000  -0.1176  -0.0000   0.0000   1.0194
+       -0.30000  1.41791E+01        -0.0000   0.0000  -0.9012   0.0000  -0.0000  -0.1026  -0.0000   0.0000   1.0038
+       -0.25000  1.48729E+01        -0.0000   0.0000  -0.9029   0.0000  -0.0000  -0.0866  -0.0000   0.0000   0.9895
+       -0.20000  1.55353E+01        -0.0000   0.0000  -0.9065   0.0000  -0.0000  -0.0699  -0.0000   0.0000   0.9763
+       -0.15000  1.61242E+01        -0.0000   0.0000  -0.9117   0.0000  -0.0000  -0.0527  -0.0000   0.0000   0.9643
+       -0.10000  1.65910E+01        -0.0000   0.0000  -0.9182   0.0000  -0.0000  -0.0352  -0.0000   0.0000   0.9534
+       -0.05000  1.68916E+01        -0.0000   0.0000  -0.9257   0.0000  -0.0000  -0.0176  -0.0000   0.0000   0.9434
+        0.05000  1.68916E+01         0.0000  -0.0000  -0.9434  -0.0000   0.0000   0.0176   0.0000  -0.0000   0.9257
+        0.10000  1.65910E+01         0.0000  -0.0000  -0.9534  -0.0000   0.0000   0.0352   0.0000  -0.0000   0.9182
+        0.15000  1.61242E+01         0.0000  -0.0000  -0.9643  -0.0000   0.0000   0.0527   0.0000  -0.0000   0.9117
+        0.20000  1.55353E+01         0.0000  -0.0000  -0.9763  -0.0000   0.0000   0.0699   0.0000  -0.0000   0.9065
+        0.25000  1.48729E+01         0.0000  -0.0000  -0.9895  -0.0000   0.0000   0.0866   0.0000  -0.0000   0.9029
+        0.30000  1.41791E+01         0.0000  -0.0000  -1.0038  -0.0000   0.0000   0.1026   0.0000  -0.0000   0.9012
+        0.35000  1.34814E+01         0.0000  -0.0000  -1.0194  -0.0000   0.0000   0.1176   0.0000  -0.0000   0.9017
+        0.40000  1.27930E+01         0.0000  -0.0000  -1.0358  -0.0000   0.0000   0.1314   0.0000  -0.0000   0.9043
+        0.45000  1.21186E+01         0.0000  -0.0000  -1.0527  -0.0000   0.0000   0.1441   0.0000  -0.0000   0.9086
+        0.50000  1.14604E+01         0.0000  -0.0000  -1.0700  -0.0000   0.0000   0.1558   0.0000  -0.0000   0.9142
+        0.55000  1.08203E+01         0.0000  -0.0000  -1.0874  -0.0000   0.0000   0.1668   0.0000  -0.0000   0.9206
+        0.60000  1.02002E+01         0.0000  -0.0000  -1.1050  -0.0000   0.0000   0.1774   0.0000  -0.0000   0.9276
+        0.65000  9.60159E+00         0.0000  -0.0000  -1.1225  -0.0000   0.0000   0.1876   0.0000  -0.0000   0.9349
+        0.70000  9.02569E+00         0.0000  -0.0000  -1.1401  -0.0000   0.0000   0.1975   0.0000  -0.0000   0.9426
+        0.75000  8.47319E+00         0.0000  -0.0000  -1.1577  -0.0000   0.0000   0.2073   0.0000  -0.0000   0.9504
+
+
+  Frequencies
+
+        s (au)                      frequencies (cm^-1)
+ R   -186.77185                     4657.16
+ P    187.13306                     4657.16
+ *      0.00000                     2054.92  1121.41  1121.41 -2292.10
+  
+       -0.75000                     4333.11   348.61   348.61
+       -0.70000                     4277.01   384.87   384.87
+       -0.65000                     4211.13   424.42   424.42
+       -0.60000                     4132.99   468.08   468.08
+       -0.55000                     4038.68   517.19   517.19
+       -0.50000                     3921.68   573.66   573.66
+       -0.45000                     3771.28   639.62   639.62
+       -0.40000                     3573.14   715.93   715.93
+       -0.35000                     3318.26   799.95   799.95
+       -0.30000                     3021.57   884.61   884.61
+       -0.25000                     2725.43   961.08   961.08
+       -0.20000                     2472.13  1023.13  1023.13
+       -0.15000                     2281.09  1068.74  1068.74
+       -0.10000                     2152.36  1098.95  1098.95
+       -0.05000                     2079.01  1115.90  1115.90
+        0.05000                     2079.01  1115.90  1115.90
+        0.10000                     2152.36  1098.95  1098.95
+        0.15000                     2281.09  1068.74  1068.74
+        0.20000                     2472.13  1023.13  1023.13
+        0.25000                     2725.43   961.08   961.08
+        0.30000                     3021.57   884.61   884.61
+        0.35000                     3318.26   799.95   799.95
+        0.40000                     3573.14   715.93   715.93
+        0.45000                     3771.28   639.62   639.62
+        0.50000                     3921.68   573.66   573.66
+        0.55000                     4038.68   517.19   517.19
+        0.60000                     4132.98   468.08   468.08
+        0.65000                     4211.12   424.42   424.42
+        0.70000                     4277.01   384.87   384.87
+        0.75000                     4333.11   348.61   348.61
+ drdy_NWChem has finished correctly, bye !
+
+ Task  times  cpu:        1.9s     wall:        2.6s
+
+
+                                     CITATION
+                                     --------
+                Please cite the following reference when publishing
+                           results obtained with NWChem:
+
+                 M. Valiev, E.J. Bylaska, N. Govind, K. Kowalski,
+              T.P. Straatsma, H.J.J. van Dam, D. Wang, J. Nieplocha,
+                        E. Apra, T.L. Windus, W.A. de Jong
+                 "NWChem: a comprehensive and scalable open-source
+                  solution for large scale molecular simulations"
+                      Comput. Phys. Commun. 181, 1477 (2010)
+                           doi:10.1016/j.cpc.2010.04.018
+
+                                      AUTHORS
+                                      -------
+     E. Apra, E. J. Bylaska, N. Govind, K. Kowalski, M. Valiev, W. A. de Jong,
+      T. P. Straatsma, H. J. J. van Dam, D. Wang, T. L. Windus, N. P. Bauman,
+       A. Panyala, J. Hammond, J. Autschbach, K. Bhaskaran-Nair, J. Brabec,
+    K. Lopata, S. A. Fischer, S. Krishnamoorthy, M. Jacquelin, W. Ma, M. Klemm,
+       O. Villa, Y. Chen, V. Anisimov, F. Aquino, S. Hirata, M. T. Hackler,
+           Eric Hermes, L. Jensen, J. E. Moore, J. C. Becca, V. Konjkov,
+            D. Mejia-Rodriguez, T. Risthaus, M. Malagoli, A. Marenich,
+   A. Otero-de-la-Roza, J. Mullin, P. Nichols, R. Peverati, J. Pittner, Y. Zhao,
+        P.-D. Fan, A. Fonari, M. J. Williamson, R. J. Harrison, J. R. Rehr,
+      M. Dupuis, D. Silverstein, D. M. A. Smith, J. Nieplocha, V. Tipparaju,
+      M. Krishnan, B. E. Van Kuiken, A. Vazquez-Mayagoitia, M. Swart, Q. Wu,
+   T. Van Voorhis, A. A. Auer, M. Nooijen, L. D. Crosby, E. Brown, G. Cisneros,
+     G. I. Fann, H. Fruchtl, J. Garza, K. Hirao, R. A. Kendall, J. A. Nichols,
+       K. Tsemekhman, K. Wolinski, J. Anchell, D. E. Bernholdt, P. Borowski,
+       T. Clark, D. Clerc, H. Dachsel, M. J. O. Deegan, K. Dyall, D. Elwood,
+      E. Glendening, M. Gutowski, A. C. Hess, J. Jaffe, B. G. Johnson, J. Ju,
+        R. Kobayashi, R. Kutteh, Z. Lin, R. Littlefield, X. Long, B. Meng,
+      T. Nakajima, S. Niu, L. Pollack, M. Rosing, K. Glaesemann, G. Sandrone,
+      M. Stave, H. Taylor, G. Thomas, J. H. van Lenthe, A. T. Wong, Z. Zhang.
+
+ Total times  cpu:        1.9s     wall:        2.7s

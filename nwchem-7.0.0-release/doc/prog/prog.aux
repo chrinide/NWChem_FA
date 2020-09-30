@@ -1,0 +1,546 @@
+\relax 
+\newlabel{sec:glossary}{{}{3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}NWChem Overview}{23}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:intro}{{1}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Introduction}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}NWChem Architecture}{26}}
+\newlabel{sec:arch}{{1.2}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Object Oriented Design}{26}}
+\newlabel{sec:ood}{{1.2.1}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Non-Uniform Memory Access}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}The Five-Tiered Modular Architecture}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{The Generic Task Interface}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{The Molecular Calculation Modules}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{The Molecular Modeling Toolkit}{30}}
+\@writefile{toc}{\contentsline {subsubsection}{The Software Development Toolkit}{30}}
+\@writefile{toc}{\contentsline {subsubsection}{The Utility Routines}{31}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Generic Task Interface}{33}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:generic}{{2}{33}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Flow of Control in NWChem}{33}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Task Execution in NWChem}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Task Routines for NWChem Operations}{36}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  task}}{36}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  task\_energy}}{36}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  task\_gradient}}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  task\_freq}}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  task\_hessian}}{38}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  task\_optimize}}{39}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  task\_num\_grad}}{39}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  task\_save\_state} and {\tt  task\_restore\_state}}{39}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Molecular Calculation Modules}{41}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:modules}{{3}{41}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Theories}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Self-Consistent Field Module -- SCF}{42}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Gaussian Density Functional Theory Module -- DFT}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}M{\o }llier-Plesset Module -- MP2}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Resolution of the Identity Approximate Integral Method}{44}}
+\@writefile{toc}{\contentsline {subsubsection}{RI-MP2}{44}}
+\@writefile{toc}{\contentsline {subsubsection}{RISCF}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}CCSD}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.6}MCSCF}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.7}CI}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.8}Molecular Mechanics (MM)}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Operations}{46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Energy}{46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Gradient}{46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Optimization}{46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Frequencies}{46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}Properties}{46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Dynamics}{47}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Molecular Modeling Toolkit}{49}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:mmt}{{4}{49}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}The Geometry Object}{49}}
+\newlabel{sec:geometry}{{4.1}{49}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Creating, destroying, loading and storing geometries}{51}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_create}}{51}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_destroy}}{51}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_check\_handle}}{51}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_rtdb\_load}}{51}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_rtdb\_store}}{52}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_rtdb\_delete}}{52}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Information About the Geometry}{52}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_ncent}}{52}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_nuc\_charge}}{53}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_nuc\_rep\_energy}}{53}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_include\_bqbq}}{53}}
+\newlabel{sec:incbqbq}{{4.1.2}{53}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_set\_bqbq}}{53}}
+\newlabel{sec:setbqbq}{{4.1.2}{53}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Information About Centers and Coordinates}{53}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_cart\_set}}{54}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_cart\_get}}{54}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_cent\_get}}{54}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_cent\_set}}{54}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_cent\_tag}}{55}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_check\_cent}}{55}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Support for Periodic Systems}{55}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_systype\_get}}{55}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_latvec\_get}}{56}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_latang\_get}}{56}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_recipvec\_get}}{56}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_recipang\_get}}{56}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_volume\_get}}{57}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_amatrix\_get} and {\tt  geom\_amatinv\_get}}{57}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}Printing and Miscellaneous Routines}{57}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_print} and {\tt  geom\_print\_xyz}}{57}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_set\_user\_units}}{58}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_tag\_to\_element}}{58}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_charge\_center}}{58}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_num\_core}}{58}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  geom\_freeze}}{59}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}The Basis Set Object}{59}}
+\newlabel{sec:basis}{{4.2}{59}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Creating, Destroying, Loading and Storing Basis Sets}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_create}}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_destroy}}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_check\_handle}}{60}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_rtdb\_load}}{60}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_rtdb\_store}}{60}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Information About the Entire Basis}{60}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_high\_angular}}{60}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_numbf}}{61}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_name}}{61}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_numcont}}{61}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_nbf\_cn\_max}}{61}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_nbf\_ce\_max}}{62}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Mapping Between Centers, Shells/Contractions and Functions}{62}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_cn2ce}}{62}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_cn2bfr}}{62}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_ce2bfr}}{62}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_ce2cnr}}{63}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_bf2ce}}{63}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_bf2cn}}{63}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Printing Basis Sets}{63}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_print}}{63}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_print\_all}}{64}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  gbs\_map\_print}}{64}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Miscellaneous Other Functions for Basis Sets}{64}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_continfo}}{64}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_get\_exponent} and {\tt  bas\_set\_exponent}}{64}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  bas\_get\_coeff} and {\tt  bas\_set\_coeff}}{65}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Other --- unique contraction information and adding centers}{66}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Linear Algebra Routines}{66}}
+\newlabel{sec:la}{{4.3}{66}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Simple linear operations}{66}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_get\_diag}}{66}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_maxelt}}{66}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_ran\_fill}}{67}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_screen}}{67}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_mat2col} and {\tt  ga\_col2mat}}{67}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Linear algebra and transformations}{67}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_mix}}{67}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  two\_index\_transf}}{68}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_matpow}}{68}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  mk\_fit\_xf}}{69}}
+\@writefile{toc}{\contentsline {subsubsection}{{ga\_orthog}}{70}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_orthog\_vec}}{70}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Iterative linear algebra operations}{70}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_iter\_diag}}{70}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_iter\_lsolve}}{72}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_iter\_orthog}}{72}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_iter\_project}}{72}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}Miscellaneous}{72}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ga\_pcg\_minimize}}{72}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  int\_1e\_ga}}{72}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  int\_2c\_ga}}{72}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Symmetry}{72}}
+\newlabel{sec:sym}{{4.4}{72}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Symmetry Group and Operations Functions}{72}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_group\_name}}{73}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_number\_ops}}{73}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_center\_map}}{73}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_inv\_op}}{73}}
+\newlabel{sec:syminvop}{{4.4.1}{73}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_apply\_op}}{73}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_apply\_cart\_op}}{74}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_get\_cart\_op}}{74}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_ops\_get}}{74}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_op\_mult\_table}}{75}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Geometries and Gradients}{75}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_geom\_project}}{75}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_grad\_symmetrize}}{75}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Character Tables}{76}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_char\_table}}{76}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_op\_classify}}{77}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}Atomic/Molecular Orbitals}{77}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_bas\_irreps}}{77}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_movecs\_adapt}}{77}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_movecs\_apply\_op}}{78}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_bas\_op}}{78}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.5}`Skeleton' integral lists}{79}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_atom\_pair}}{79}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_atom\_quartet} and {\tt  sym\_atom\_gen\_quartet}}{79}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_shell\_pair}}{80}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_shell\_quartet}}{80}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_symmetrize}}{81}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.6}Printing Symmetry Information}{81}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_print\_all}}{81}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_print\_char\_table}}{82}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_print\_ops}}{82}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.7}Internal symmetry stuff that might be useful}{82}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_op\_type}}{82}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sym\_op\_class\_name}}{82}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.8}Miscellaneous}{82}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  cross\_product}}{82}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  deter3}}{82}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Integral Application Programmer's Interface}{83}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Overview}{83}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Adding a new base integral code to the NWChem INT-API}{84}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Software Development Toolkit}{85}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:sdt}{{6}{85}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Non-Uniform Memory Allocation (NUMA)}{85}}
+\newlabel{sec:numa}{{6.1}{85}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Message Passing}{86}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Memory Allocator (MA)}{88}}
+\newlabel{sec:ma}{{6.1.2}{88}}
+\@writefile{toc}{\contentsline {subsubsection}{MA Data Types}{88}}
+\@writefile{toc}{\contentsline {subsubsection}{Implementation}{88}}
+\@writefile{toc}{\contentsline {subsubsection}{List of MA routines}{89}}
+\@writefile{toc}{\contentsline {subsubsection}{MA Errors}{92}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Global Arrays (GA)}{93}}
+\newlabel{sec:ga}{{6.1.3}{93}}
+\@writefile{toc}{\contentsline {subsubsection}{Interaction Between GA and MA}{93}}
+\@writefile{toc}{\contentsline {subsubsection}{List of GA Routines}{95}}
+\@writefile{toc}{\contentsline {subsubsection}{New(?) Stuff}{104}}
+\@writefile{toc}{\contentsline {subsubsection}{Use of TCGMSG global operation routines}{106}}
+\@writefile{toc}{\contentsline {subsubsection}{Interaction between GA and message-passing}{106}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}ChemI/O}{106}}
+\newlabel{sec:ChemIO}{{6.1.4}{106}}
+\@writefile{toc}{\contentsline {subsubsection}{Elementary I/O Library (ELIO)}{107}}
+\@writefile{toc}{\contentsline {subsubsection}{Disk Resident Arrays}{107}}
+\@writefile{toc}{\contentsline {subsubsection}{Exclusive Access Files (EAF)}{112}}
+\@writefile{toc}{\contentsline {subsubsection}{Shared Files (SF)}{118}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}The Run Time Data Base (RTDB)}{120}}
+\newlabel{sec:rtdb}{{6.2}{120}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Functions to Control Access to the Runtime Database}{121}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_parallel}}{122}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_open}}{122}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_close}}{123}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_put}}{123}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_get}}{124}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_cput} and {\tt  rtdb\_cget}}{125}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_ma\_get}}{125}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_get\_info}}{126}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_first} and {\tt  rtdb\_next}}{127}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_delete}}{128}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  rtdb\_print}}{129}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Utilities}{131}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:utilities}{{7}{131}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Input Parser}{131}}
+\newlabel{sec:parser}{{7.1}{131}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}Free-format Fortran Input Routines -- INP}{131}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.2}Initialization}{131}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_init}}{131}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.3}Basic Input Routines}{132}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_read}}{132}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_i}}{132}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_f}}{133}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_a}}{133}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_a\_trunc}}{133}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_line}}{134}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_cline}}{134}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_irange}}{134}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_ilist}}{134}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_search}}{135}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.4}Routines concerning fields within a line}{135}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_n\_field}}{135}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_cur\_field}}{135}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_set\_field}}{136}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_prev\_field}}{136}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.5}String routines}{136}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_strlen}}{136}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_lcase}}{136}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_ucase}}{137}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_compare}}{137}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_match}}{137}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_strtok}}{137}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.6}Error handling routines}{138}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_errout}}{138}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_outrec}}{138}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_clear\_err}}{138}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  inp\_eof}}{139}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}NWChem Ouput to Ecce}{139}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Contents of Output for Ecce}{139}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Format of Output}{140}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}NWChem Ecce Output API}{141}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine ecce\_print\_module\_entry(module)}{141}}
+\@writefile{toc}{\contentsline {subsubsection}{routine ecce\_print\_module\_exit(module, status)}{142}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine ecce\_print1(keyword, ma\_type, data, dim1) }{142}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine ecce\_print2(keyword, ma\_type, data, dim1, dim2)}{143}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine ecce\_print1\_char(keyword, data, dim1) }{143}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine ecce\_print2\_dbl\_tol }{144}}
+\@writefile{toc}{\contentsline {subsubsection}{routine ecce\_print\_control(status, old)}{144}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine ecce\_print\_file\_open(filename)}{144}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine ecce\_print\_file\_close()}{144}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine ecce\_print\_echo\_input }{145}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine ecce\_print\_echo\_string }{145}}
+\@writefile{toc}{\contentsline {subsubsection}{ routine is\_ecce\_print\_on }{145}}
+\@writefile{toc}{\contentsline {subsubsection}{ subroutine movecs\_ecce\_print\_on }{145}}
+\@writefile{toc}{\contentsline {subsubsection}{ subroutine movecs\_ecce\_print\_off }{145}}
+\@writefile{toc}{\contentsline {subsubsection}{ subroutine movecs\_ecce }{145}}
+\@writefile{toc}{\contentsline {subsubsection}{ bas\_ecce\_print\_basis }{145}}
+\@writefile{toc}{\contentsline {subsubsection}{ geom\_print\_rtdb\_ecce }{145}}
+\@writefile{toc}{\contentsline {subsubsection}{ geom\_print\_ecce }{145}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.4}Standard exit status}{145}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.5}Standard keywords}{146}}
+\@writefile{toc}{\contentsline {subsubsection}{Converged/final energies}{146}}
+\@writefile{toc}{\contentsline {subsubsection}{Converged/final properties}{147}}
+\@writefile{toc}{\contentsline {subsubsection}{Convergence information}{148}}
+\@writefile{toc}{\contentsline {subsubsection}{Timing and performance information}{149}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Utility routines}{149}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Printing utilities}{149}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_print\_centered}}{149}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  banner}}{150}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  output}}{150}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Error Routines}{151}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  errquit}}{151}}
+\newlabel{errquit}{{7.3.2}{151}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.3}Parallel Communication}{151}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_char\_ga\_brdcst}}{151}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  fcsnd} and {\tt  fcrcv}}{152}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.4}Naming Files}{152}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_file\_name}}{152}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_file\_prefix}}{153}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_pname}}{153}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.5}Sequential Fortran Files}{153}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_flush}}{153}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  sread} and {\tt  swrite}}{154}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.6}Parallel file operations}{154}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  begin\_seq\_output}, {\tt  write\_seq}, and {\tt  end\_seq\_output}}{154}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.7}Data packing and unpacking}{155}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.8}Checksums}{156}}
+\@writefile{toc}{\contentsline {subsubsection}{Checksum C and Fortran interface}{156}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.9}Source version information}{158}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_version}}{158}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.10}Times and dates}{158}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_cpusec}}{158}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_wallsec}}{158}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_date}}{158}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.11}System operations and information}{159}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_hostname}}{159}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_file\_unlink}}{159}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_file\_copy}}{159}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_system}}{159}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.12}C to Fortran interface}{160}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  string\_to\_fortchar} and {\tt  fortchar\_to\_string}}{160}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.13}Debugging aids}{160}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  ieeetrap}}{160}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.14}Miscellaneous BLAS-like operations}{160}}
+\@writefile{toc}{\contentsline {subsubsection}{Initializing arrays --- {\tt  dfill} and {\tt  ifill}}{161}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Print Control}{161}}
+\newlabel{sec:print}{{7.4}{161}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}Other Relevant Routines}{163}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_print}}{163}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_print\_input}}{164}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_print\_push}}{164}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_print\_pop}}{164}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_print\_rtdb\_load}}{164}}
+\@writefile{toc}{\contentsline {subsubsection}{{\tt  util\_print\_set\_level}}{165}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Installing NWChem}{167}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:install}{{8}{167}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}How to Obtain NWChem}{167}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Supported Platforms}{168}}
+\newlabel{sec:platforms}{{8.2}{168}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.1}Porting Notes}{168}}
+\newlabel{sec:PortingNotes}{{8.2.1}{168}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}Environmental Variables}{169}}
+\newlabel{sec:envar}{{8.3}{169}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Makefiles and Libraries}{171}}
+\newlabel{sec:makelib}{{8.4}{171}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.5}Managing NWChem}{176}}
+\newlabel{sec:cvs-intro}{{8.5}{176}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.1}Introduction to CVS}{176}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.2}The CVS Model}{177}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.3}The CVS Program}{178}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.4}Summary of CVS commands}{180}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.5}Troubleshooting CVS}{181}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Developing New Modules and Enhancements}{183}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:develop}{{9}{183}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}General Design Guidelines}{183}}
+\newlabel{sec:gendesign}{{9.1}{183}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Coding Style}{184}}
+\newlabel{sec:coding-style}{{9.2}{184}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.1}Version information}{185}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.2}Standard interface for top-level modules}{185}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.3}No globally defined common blocks}{186}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.4}Naming of routines and common blocks}{186}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.5}Inclusion of common block definitions}{186}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.6}Convention for naming {\tt  include} files}{187}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.7}Syntax for including files using the C preprocessor}{187}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.8}No implicitly typed variables}{187}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.9}Use {\tt  double precision} rather than {\tt  real*8}}{188}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.10}C macro definitions should be in upper case}{188}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.11}Fortran source should be in lower or mixed case}{188}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.12}Naming of variables holding handles/pointers obtained from MA/GA}{188}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.13}Fortran unit numbers}{188}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.14}Use standard print control}{189}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.15}Error handling}{189}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.16}Comments}{189}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.17}Message IDs}{191}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.18}Bit operations --- {\tt  bitops.fh}}{191}}
+\@writefile{lot}{\contentsline {table}{\numberline {9.1}{\ignorespaces  Effect of Bit Operations}}{192}}
+\newlabel{tabbit}{{9.1}{192}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.19}Blockdata statements and linking}{192}}
+\newlabel{sec:newmod}{{9.2.19}{192}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {10}Testing the Program}{193}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:testing}{{10}{193}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {11}Documenting New Modules and Code Enhancements}{195}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:newdoc}{{11}{195}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.1}Content of the Documentation}{196}}
+\newlabel{sec:standalone}{{11.1}{196}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.1}Documentation of a Molecular Calculation Module}{196}}
+\@writefile{toc}{\contentsline {subsubsection}{Module Documentation Template}{197}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.2}Documentation of Modeling or Development Tools}{197}}
+\@writefile{toc}{\contentsline {subsubsection}{Modeling Tools Documentation Template}{198}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1.3}Content for In-Source Documentation of Routines}{199}}
+\newlabel{sec:content}{{11.1.3}{199}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Integral Application Programmer's Interface}{203}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{appendix_intapi}{{A}{203}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}INT-API: Initialization, Integral Accuracy and Termination}{203}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.1}int\_init}{203}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.2}intd\_init}{204}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.3}int\_terminate}{204}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.4}intd\_terminate}{204}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.5}intdd\_terminate}{204}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.6}int\_acc\_std}{205}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.7}int\_acc\_high}{205}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.8}int\_acc\_get}{205}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.9}int\_acc\_set}{206}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}INT-API: Memory Managment Routines}{206}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.1}int\_mem}{206}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.2}int\_mem\_1e}{206}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.3}int\_mem\_2e4c}{207}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.4}int\_mem\_h1}{207}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.5}int\_mem\_2eec}{207}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.6}int\_mem\_2e2c}{208}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.7}int\_mem\_3ov}{208}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.8}int\_mem\_print}{208}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.9}intb\_mem\_2e4c}{208}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}INT-API: Integral Routines}{209}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.1}int\_1estv}{209}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.2}int\_1eov}{210}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.3}int\_1eke}{210}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.4}int\_1epe}{211}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.5}int\_1eh1}{212}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.6}int\_1eall}{212}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.7}int\_1cg}{213}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.8}int\_1e3ov}{214}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.9}int\_l1e3ov}{214}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.10}int\_l1eall}{215}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.11}int\_pgen1e}{216}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.12}int\_l1eh1}{217}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.13}int\_l1eke}{217}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.14}int\_l1eov}{218}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.15}int\_l1epe}{219}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.16}int\_l1gen1e}{220}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.17}int\_2e2c}{220}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.18}int\_l2e2c}{221}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.19}int\_l2e3c}{221}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.20}int\_2e3c}{222}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.21}int\_2e4c}{223}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.22}int\_l2e4c}{223}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.23}intb\_init4c}{224}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.24}intb\_2e4c}{225}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.25}intb\_nw\_2e4c}{227}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.4}INT-API: Property Integral Routines}{228}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4.1}int\_mpole}{228}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4.2}int\_projpole}{229}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.5}INT-API: Miscellaneous Routines}{229}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.1}exact\_mem}{229}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.2}emem\_3ov}{230}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.3}emem\_1e}{230}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.4}emem\_1e\_dk}{231}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.5}emem\_1e\_rel}{231}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.6}emem\_2e4c}{231}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.7}emem\_2e3c}{232}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.8}emem\_2e2c}{232}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.9}emem\_2e4c\_full}{233}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.10}int\_nbf\_max}{233}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.11}int\_mem\_zero}{233}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.12}api\_is\_ecp\_basis}{234}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.13}emem\_1e\_pvp}{234}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.14}exactd\_mem}{234}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.15}emem\_d1e}{235}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.16}emem\_d1e\_rel}{235}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.17}emem\_d2e4c}{235}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.18}emem\_d2e4c\_full}{236}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.19}int\_canon}{236}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.20}int\_chk\_init}{236}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.21}int\_chk\_sh}{237}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.22}int\_nospherical\_check}{237}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.23}int\_nogencont\_check}{237}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.24}int\_nospshell\_check}{238}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.25}int\_bothsp\_gc\_check}{238}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.26}int\_hf1sp}{238}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.27}int\_hf1sp\_ecp}{239}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.28}int\_1psp}{241}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.29}int\_1dsp}{242}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.30}int\_1spsp}{243}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.31}int\_1spa}{243}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.32}int\_sp1b}{244}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.33}int\_nint}{244}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.34}int\_unint}{245}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.35}int\_nint\_cart}{245}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5.36}int\_unint\_cart}{246}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Performance Statistics Collection --- PSTAT}{247}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {B.1}Model}{247}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.2}API}{247}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.1}Include files}{247}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.2}{\tt  pstat\_init}}{248}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.3}{\tt  pstat\_terminate}}{248}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.4}{\tt  pstat\_allocate}}{248}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.5}{\tt  pstat\_free}}{248}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.6}{\tt  pstat\_on}}{249}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.7}{\tt  pstat\_off}}{249}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.8}{\tt  pstat\_acc}}{249}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.9}{\tt  pstat\_print\_all} and {\tt  pstat\_print}}{249}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.10}Usage Notes}{250}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.3}Closing Comment}{250}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Integral File I/O -- INT2E}{251}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {C.1}Application- and I/O-Level Views of the Data Stream}{251}}
+\@writefile{toc}{\contentsline {section}{\numberline {C.2}Internal Data Structures (all are node-private)}{251}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.2.1}Cache}{252}}
+\@writefile{toc}{\contentsline {section}{\numberline {C.3}Subprograms}{252}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.1}{\tt  sread, swrite} (in util directory)}{252}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.2}{\tt  int2e\_file\_open} (API)}{253}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.3}{\tt  int2e\_file\_close} (API)}{253}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.4}{\tt  int2e\_file\_rewind} (API)}{253}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.5}{\tt  int2e\_file\_read} (API)}{253}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.6}{\tt  int2e\_file\_write} (API)}{253}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.7}{\tt  int2e\_file\_write\_big} (internal)}{253}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.8}{\tt  int2e\_buf\_read, int2e\_buf\_write} (mostly internal)}{254}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.9}{\tt  int2e\_buf\_clear} (internal)}{254}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.10}{\tt  int2e\_buf\_cntr\_pack, int2e\_buf\_cntr\_unpack} (internal)}{254}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.11}{\tt  int2e\_buf\_pack, int2e\_buf\_unpack} (internal)}{254}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3.12}{\tt  int2e\_set\_bf\_range, int2e\_get\_bf\_range} (API)}{254}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {D}NWChem Error Messages}{257}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}

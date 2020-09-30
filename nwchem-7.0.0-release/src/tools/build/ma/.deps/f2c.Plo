@@ -1,0 +1,24 @@
+ma/f2c.lo: ../ga-5.7.1/ma/f2c.c /usr/include/stdc-predef.h config.h \
+ gaf2c/farg.h gaf2c/typesf2c.h gaf2c/typesf2c.h ../ga-5.7.1/ma/ma.h \
+ ../ga-5.7.1/ma/macdecls.h ../ga-5.7.1/ma/macommon.h ma/matypes.h \
+ ../ga-5.7.1/ma/scope.h
+
+/usr/include/stdc-predef.h:
+
+config.h:
+
+gaf2c/farg.h:
+
+gaf2c/typesf2c.h:
+
+gaf2c/typesf2c.h:
+
+../ga-5.7.1/ma/ma.h:
+
+../ga-5.7.1/ma/macdecls.h:
+
+../ga-5.7.1/ma/macommon.h:
+
+ma/matypes.h:
+
+../ga-5.7.1/ma/scope.h:
