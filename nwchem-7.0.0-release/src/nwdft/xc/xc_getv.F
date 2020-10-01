@@ -183,14 +183,24 @@ c
 c               get some work space
                 g_vxc(2) = ga_create_atom_blocked(geom,ao_bas_han,'jk')
 c
+c     TEST=====================================================================
+c                write(luout,*) 'rtdb_in_getv=',rtdb
+c                write(luout,*) 'Ecoul_BEFORE_fock_2e=',Ecoul,'g_vxc(2)=',g_vxc(2)
+c                write(luout,*) 'Exc_BEFORE_fock_2e', Exc(1), Exc(2)
+c     TEST=====================================================================
 c               calculate the exchange and coulomb parts
                 call ga_zero(g_vxc(2))
                 g_dens(2)=g_dens(1)
                 call fock_2e(geom, AO_bas_han, 2, jfac, kfac,
      &             tol2e, oskel, g_dens, g_vxc, .false.)
-                Exc(1) = Exc(1)+0.5d0*ga_ddot(g_dens(1),g_vxc(1)) !element-wise dot product of two arrays
-                !write(LuOut,*) g_vxc(1)
+                Exc(1) = Exc(1)+0.5d0*ga_ddot(g_dens(1),g_vxc(1)) 
                 ecoul = 0.5d0*ga_ddot(g_dens(1),g_vxc(2)) 
+c     TEST=====================================================================
+c               Shuyy's Note: For now, only coulomb energy has been calculated
+c                write(luout,*) 'Ecoul_after_fock_2e=',Ecoul,'g_vxc=',g_vxc(1),g_vxc(2)
+c                write(luout,*) 'g_vxc=',g_vxc(1),g_vxc(2) 
+c                write(luout,*) 'Exc_after_fock_2e', Exc(1), Exc(2)
+c     TEST=====================================================================
                 call ga_dadd(1d0,g_vxc(1),1d0,g_vxc(2),g_vxc(1))
                 if (.not. ga_destroy(g_vxc(2))) call errquit
      $             ('xc_getv: ga corrupt?',0, GA_ERR)
@@ -245,7 +255,7 @@ c             set up prefactors
 c
 c             calculate the non-CAM exchange
               if (cam_exch) call case_setflags(.true.)
-                call fock_2e(geom, AO_bas_han, 1, jfac, kfac,
+                call fock_2e( geom, AO_bas_han, 1, jfac, kfac,
      &             tol2e, oskel, g_dens(1), g_vxc(1), .false.)
               if (cam_exch)  call case_setflags(.false.) ! turn off attenuation
               Exc(1) = Exc(1)+0.5d0*ga_ddot(g_dens(1),g_vxc(1))
@@ -340,7 +350,7 @@ c              Calculate Exchange
                call ga_zero(g_tmp(1))
                call ga_zero(g_tmp(2))
                call case_setflags(.true.) ! turn on attenuation
-               call fock_2e(geom, AO_bas_han, 2, jfac, kfac,
+               call fock_2e( geom, AO_bas_han, 2, jfac, kfac,
      &              tol2e, oskel, g_dens, g_tmp, .false.)
                call case_setflags(.false.) ! turn off attenuation
 c
@@ -366,7 +376,9 @@ c
       endif
       if(oprint_time)
      &      time2_2e=util_cpusec()   ! end 2e build time
-c
+c====================================================================
+c     Shuyy note: XC energy have not been calculated yet
+c====================================================================
 c     print fock_2e build time
 c
       if(oprint_time) then
@@ -454,6 +466,10 @@ cc
 c         endif
 c      endif
 cc
+c     TEST=====================================================================
+c                write(luout,*) 'odftps=',odftps
+c                write(luout,*) 'Exc_BEFORE_fock_2e', Exc(1), Exc(2)
+c     TEST=====================================================================
       if (odftps) call pstat_on(ps_getvxc)
       call xc_getvxc(rtdb, Exc, nExc, iVxc_opt, g_xcinv,
      &                   g_dens, g_vxc, IOLGC, rho_n, 0, 0)
@@ -462,6 +478,7 @@ c last two inputs -------------------------------->.fde_option., g_dens_fde
 c
 cc AJL/End
 c
+
       if (oprint_intermediate_xc)then
          write(luout,*)' Fock XC matrix leaving xc_getv: '
          call util_flush(6)

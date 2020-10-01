@@ -59,7 +59,6 @@ c
       integer LU,ierr,ilo,ihi,jlo,jhi,nnii
       integer adrc,ldc,iptr,intdum
       character*255 errmsg
-      
 c     
 c     Fit electronic charge density. The fitting coefficients are obtained by 
 c     solving the normal equations for a standard linear least squares problem.

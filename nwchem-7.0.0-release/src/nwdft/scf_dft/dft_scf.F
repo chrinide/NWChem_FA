@@ -448,6 +448,10 @@ c     AOR end
 c    Jorge Garza/Begin
       call xc_sicinit(rtdb, test_sic, condfukui, exact_pot,
      &                l_degen, i_degen, noc, act_levels)
+c     TEST=====================================================================
+c       write(luout,*) 'test_sic=',test_sic
+c      write(luout,*) 'Exc_AFTER_xc_getv=', Exc(1), Exc(2)
+c     TEST=====================================================================
 c     Jorge Garza/End
       use_nwxc = util_module_avail("nwxc")
       if (use_nwxc) then

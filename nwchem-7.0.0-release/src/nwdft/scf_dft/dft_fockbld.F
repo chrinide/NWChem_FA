@@ -329,6 +329,9 @@ c
       if (.not.ma_pop_stack(lscr))
      &   call errquit('dft_scf: cannot pop stack',0, MA_ERR)
 c
+c     TEST=====================================================================
+c      write(luout,*) 'Ecoul_BEFORE_CDFIT_GETVC=',Ecoul
+c     TEST=====================================================================
       if (CDFIT)then
 c
 c        Fit the electron charge density.
@@ -357,6 +360,9 @@ c
      &               IOLGC,
      &               .false., 1)
       if (odftps) call pstat_off(ps_vcoul)
+c     TEST=====================================================================
+c      write(luout,*) 'Ecoul_AFTER_CDFIT_GETVC=',Ecoul (this part doesn't calculate the Ecoul for my test H2O DFT task)
+c     TEST=====================================================================
 c     
 c     Add V coul to Fock Matrix
 c     
@@ -427,13 +433,21 @@ cc AJL/End
 c
       if (odftps) call pstat_on(ps_xc)
 c
+c     TEST=====================================================================
+c      write(luout,*) 'Ecoul_BEFORE_xc_getv=',Ecoul
+c      write(luout,*) 'Exc_BEFORE_xc_getv=', Exc(1), Exc(2)
+c     TEST=====================================================================
 c     == Calculate the HF exchange (exact Coulomb), DFT exchange-correlation ==
       call xc_getv(rtdb, Exc, Ecoul,nExc, iVxc_opt, g_xcinv, g_dens, 
      &             g_vxc, IOLGC, g_wght, g_xyz, g_nq,wght_GA, rho_n,
      &             rdens_atom, cetobfr, natoms)
 c
       if (odftps) call pstat_off(ps_xc)
-c
+c     
+c     TEST=====================================================================
+c      write(luout,*) 'Ecoul_AFTER_xc_getv=',Ecoul
+c      write(luout,*) 'Exc_AFTER_xc_getv=', Exc(1), Exc(2)
+c     TEST=====================================================================
 c     add zora contributions
       if (do_zora) then
         Ezora_sf =0.d0

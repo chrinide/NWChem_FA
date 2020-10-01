@@ -58,6 +58,11 @@ c
       logical v_nonzero
       external nxtask
 c
+c     TEST=====================================================================
+c      open(1, file = 'test.txt', status = 'old') 
+c      write(1,*) 'dftfitvc has been successfully called'
+c      close(1)
+c     TEST=====================================================================
       if(dermat) call errquit(
      C     'fitvc: dermat not coded yet',0,0)
       if (.not.dermat .and. nmat.ne.1) then
@@ -321,9 +326,9 @@ c
       endif
 c
 c     Obtain the matrix of 2-ctr ERIs.
-c      
+c     
 c
-c
+c     
 c     Compute Ecoul2 only for the first set of fit coefficients
 c     !!! Should modify this so that nothing is done if nmat > 1
 c     !!! Looks like g_2ceri not needed in that case

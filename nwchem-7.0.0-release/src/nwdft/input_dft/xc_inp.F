@@ -4256,12 +4256,12 @@ c     oep
 c     oep-loc
 c     
       integer num_dirs, ind, mlen, test_sic
-      parameter (num_dirs = 3)
+      parameter (num_dirs = 4)
       character*12 dirs(num_dirs)
       character*255 test
 c
 c
-      data dirs /'perturbative', 'oep', 'oep-loc'/
+      data dirs /'perturbative', 'oep', 'oep-loc', 'fermi-amaldi'/
 c     
       mlen = inp_strlen(module)
       test_sic = 1
@@ -4275,7 +4275,7 @@ c
          goto 10000
       endif
 c
-      goto (100, 200, 300, 1999) ind
+      goto (100, 200, 300, 400, 1999) ind
       call errquit('sic_inp: unimplemented directive', ind, INPUT_ERR)
 c     
   100 if (.not.inp_a(test)) then
@@ -4299,7 +4299,14 @@ c
       end if
 c
       goto 10
-c             
+  400 if (.not.inp_a(test)) then
+        test_sic = 5
+      else
+        goto 10000
+      endif
+c           
+      goto 10
+c            
  1999 continue
 c
       if (.not. rtdb_put(rtdb, 'dft:test_sic', mt_int, 1,test_sic))

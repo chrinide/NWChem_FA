@@ -1,5 +1,5 @@
       subroutine fock_2e( geom1, ao_basis, mfock, jfac, kfac,
-     $                    tol2e1, oskel1, vg_dens, vg_fock, asym )
+     $                    tol2e1, oskel1, vg_dens, vg_fock, asym)
 c$Id$
 c
 c     wrapper routine for ao_fock_2e and riscf_fock_2e
@@ -19,6 +19,7 @@ c     !!! BGJ test !!!
 #include "util.fh"
 #include "stdio.fh"
 
+      integer rtdb                   ! Shuyy's try
       integer geom1, ao_basis        ! [input] parameter handles
       integer nfock,mfock            ! [input] number of Fock matrices
       double precision tol2e1        ! [input] integral selection threshold
@@ -80,6 +81,14 @@ c !!! Edo commented this out before since it caused bugs - ask him about
 c !!! it when it is necessary to turn back on for J fit CPKS
       jfit = .false.
 c     !!! BGJ test !!!
+c  
+c     PARAMETER Test(In order to check which if condition works)===========
+c        write(luout,*) 'rtdb=',rtdb
+c       write(luout,*) '***nriscf=',nriscf
+c       write(luout,*) 'nfock=',nfock
+c       write(luout,*) 'oreplicated=',oreplicated
+c       write(luout,*) 'oreadfile=',oreadfile
+c     TEST=================================================================
       if (jfit) then
 c
 c     get the HF exchange part (must be replaced by DFT X)
@@ -91,7 +100,7 @@ c
      &        jfac(1)
 cold         jfac(1)=0d0
 cold         kfac(1)=-0.5d0*bgj_kfac()
-         call ao_fock_2e( geom1, ao_basis, 1, 0d0, -0.5d0*bgj_kfac(),
+         call ao_fock_2e(geom1, ao_basis, 1, 0d0, -0.5d0*bgj_kfac(),
      $        tol2e1, oskel1, vg_dens, vg_fock, asym )
 
          call fock_j_fit(nfock, vg_dens, vg_fockc)
@@ -108,7 +117,7 @@ cold         kfac(1)=-0.5d0*bgj_kfac()
 c
 c       get HF exchange part in normal way
 c
-        call ao_fock_2e( geom1, ao_basis, nfock, lfac, kfac,
+        call ao_fock_2e(geom1, ao_basis, nfock, lfac, kfac,
      $        tol2e1, oskel1, vg_dens, vg_fock, asym )
 c
 c       get HF coulomb part from RISCF integrals
@@ -124,10 +133,15 @@ c
           call riscf_fock_2e( geom1, ao_basis, riscf_basis, nfock, 
      $         jfac, kfac, tol2e1, oskel1, vg_dens, vg_fock )
         else
-          call ao_fock_2e( geom1, ao_basis, nfock, jfac, kfac,
+          call ao_fock_2e(geom1, ao_basis, nfock, jfac, kfac,
      $          tol2e1, oskel1, vg_dens, vg_fock,asym )
         endif
       else
+C     =========================================================
+c        Shuyy's Note: in H2O dft task, nriscf=0, ao_fock_2e is called
+c         write(luout,*) 'oreplicated=',oreplicated
+c         write(luout,*) 'oreadfile=',oreadfile
+c     =========================================================
          call ao_fock_2e( geom1, ao_basis, nfock, jfac, kfac,
      $                    tol2e1, oskel1, vg_dens, vg_fock, asym )
       endif

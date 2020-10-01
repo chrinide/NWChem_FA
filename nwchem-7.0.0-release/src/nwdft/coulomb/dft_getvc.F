@@ -38,12 +38,17 @@ c     2) fitting the charge density via Dunlap method and, then, evaluating
 c     the set of 3-ctr ERIs formed from the AO and CD basis sets,
 c     3) solving Poisson's equation via (Delley,Becke,Feibelman,?)'s method. 
 c     
+c     TEST=====================================================================
+c      open(1, file = 'test.txt', status = 'old')
+c     write(1,*) 'dftgetvc has been called, and iVcoul_opt=',iVcoul_opt
+c     close(1)
+c     TEST=====================================================================
       call ga_sync
 c
       if( iVcoul_opt.eq.0 )then
          call ga_zero(g_vc)
             Ecoul = 0.0d0
-c
+c     
       else if( iVcoul_opt.eq.1 )then
 c       Compute the Coulomb potential via a LSQ fitting procedure.
 
